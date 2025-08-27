@@ -1,0 +1,82 @@
+import React from 'react';
+import image from '../../assets/image.png';
+
+const SignUp = () => {
+    return (
+        <div className='min-h-screen bg-gradient-to-b from-white to-blue-50 py-16'>
+            <div className='max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-xl bg-white overflow-hidden'>
+                <div className='hidden md:flex items-center justify-center  p-8'>
+                    <img src={image} alt='Create account' className='w-250 h-120 object-contain' />
+                </div>
+
+                <div className='p-8 sm:p-10'>
+                    <h1 className='text-2xl sm:text-3xl font-extrabold text-blue-900'>Create your AptiStep account</h1>
+                    <p className='mt-2 text-sm text-gray-600'>Join to practice aptitude, track progress, and improve faster.</p>
+
+                    <form className='mt-8 space-y-5'>
+                        <div>
+                            <label className='block text-sm font-semibold text-blue-900'>Full name</label>
+                            <input
+                                type='text'
+                                required
+                                placeholder='John Doe'
+                                className='mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500'
+                            />
+                        </div>
+
+                        <div>
+                            <label className='block text-sm font-semibold text-blue-900'>Email</label>
+                            <input
+                                type='email'
+                                required
+                                placeholder='you@example.com'
+                                className='mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500'
+                            />
+                        </div>
+
+                        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+                            <div>
+                                <label className='block text-sm font-semibold text-blue-900'>Password</label>
+                                <input
+                                    type='password'
+                                    required
+                                    placeholder='••••••••'
+                                    className='mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500'
+                                />
+                            </div>
+                            <div>
+                                <label className='block text-sm font-semibold text-blue-900'>Confirm password</label>
+                                <input
+                                    type='password'
+                                    required
+                                    placeholder='••••••••'
+                                    className='mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500'
+                                />
+                            </div>
+                        </div>
+
+                        <div className='flex items-start gap-3'>
+                            <input id='terms' type='checkbox' className='mt-1 h-4 w-4' required />
+                            <label htmlFor='terms' className='text-sm text-gray-700'>
+                                I agree to the Terms of Service and Privacy Policy
+                            </label>
+                        </div>
+
+                        <button
+                            type='submit'
+                            className='w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200'
+                        >
+                            Create account
+                        </button>
+
+                        <div className='text-sm text-gray-600 text-center'>
+                            Already have an account? <span className='text-blue-700 font-semibold cursor-pointer'>Log in</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    );
+}
+
+export default SignUp;
