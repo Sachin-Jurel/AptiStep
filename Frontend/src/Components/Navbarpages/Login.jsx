@@ -61,9 +61,9 @@ const Login = () => {
             </button>
 
             <div className="text-sm text-gray-600 text-center">
-              Already have an account?{" "}
-              <span className="text-blue-700 font-semibold cursor-pointer">
-                Log in
+              Don't have an account?{" "}
+              <span className="text-[#3BA97F] font-semibold cursor-pointer hover:text-[#3BA97F]/80">
+                Sign up
               </span>
             </div>
           </form>

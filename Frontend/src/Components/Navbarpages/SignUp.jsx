@@ -92,7 +92,7 @@ const SignUp = () => {
 
             <div className="text-sm text-gray-600 text-center">
               Already have an account?{" "}
-              <span className="text-blue-700 font-semibold cursor-pointer">
+              <span className="text-emerald-700 font-semibold cursor-pointer">
                 Log in
               </span>
             </div>
