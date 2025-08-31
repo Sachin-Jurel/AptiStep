@@ -11,9 +11,10 @@ const NavBar = () => {
   
     <nav className="fixed top-0 w-full py-5 px-6 flex items-center justify-between h-16 text-xl font-semibold shadow-lg bg-white z-50">
       {/* Logo */}
-      <div className="flex items-center cursor-pointer hover:scale-105 transition-transform duration-300">
+      <div className="flex items-center cursor-pointer px-10 hover:scale-105 transition-transform duration-300">
         <img src={logoIcon} alt="Logo" className="mx-1 w-10 h-13" />
-        <h2 className="text-blue-800 font-bold">AptiStep</h2>
+        <h2 className="text-blue-950 font-bold text-3xl">Apti</h2>
+        <h2 className="text-emerald-500 font-bold text-3xl">Step</h2>
       </div>
 
       {/* Desktop Menu */}
@@ -24,10 +25,10 @@ const NavBar = () => {
         <div className="px-3 py-1 rounded-lg cursor-pointer hover:bg-teal-50 hover:text-teal-600 hover:scale-105 transition-all duration-200">
           Features
         </div>
-        <div className="px-3 py-1 rounded-lg cursor-pointer flex items-center gap-2 hover:bg-teal-50 hover:text-teal-600 hover:scale-105 transition-all duration-200">
+        <Link to="/login" className="px-3 py-1 rounded-lg cursor-pointer flex items-center gap-2 hover:bg-teal-50 hover:text-teal-600 hover:scale-105 transition-all duration-200">
           <img src={loginIcon} alt="Log In" className="w-6 h-6" />
           <h4>Log In</h4>
-        </div>
+        </Link>
         <Link to="/signup" className="px-3 py-1 rounded-lg cursor-pointer flex items-center gap-2 hover:bg-teal-50 hover:text-teal-600 hover:scale-105 transition-all duration-200">
           <img src={addUserIcon} alt="Sign Up" className="w-6 h-6" />
           <h4>Sign Up</h4>
@@ -73,10 +74,10 @@ const NavBar = () => {
           <div className="px-3 py-1 rounded-lg cursor-pointer hover:bg-teal-50 hover:text-teal-600 transition-all duration-200">
             Features
           </div>
-          <div className="px-3 py-1 rounded-lg cursor-pointer flex items-center gap-2 hover:bg-teal-50 hover:text-teal-600 transition-all duration-200">
+          <Link to="/login" className="px-3 py-1 rounded-lg cursor-pointer flex items-center gap-2 hover:bg-teal-50 hover:text-teal-600 transition-all duration-200">
                          <img src={loginIcon} alt="Log In" className="w-6 h-6" />
             <h4>Log In</h4>
-          </div>
+          </Link>
           <Link to="/signup" className="px-3 py-1 rounded-lg cursor-pointer flex items-center gap-2 hover:bg-teal-50 hover:text-teal-600 transition-all duration-200">
             <img src={addUserIcon} alt="Sign Up" className="w-6 h-6" />
             <h4>Sign Up</h4>

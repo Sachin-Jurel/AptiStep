@@ -4,6 +4,7 @@ import MainSection from "./Components/Home/MainPage";
 import Footer from "./Components/Home/Footer";
 import SignUp from "./Components/Navbarpages/SignUp";
 import "./index.css";
+import Login from "./Components/Navbarpages/Login";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<MainSection />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
         <Footer />
