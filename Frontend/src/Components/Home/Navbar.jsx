@@ -18,9 +18,9 @@ const NavBar = () => {
       </div>
 
       {/* Desktop Menu */}
-      <div className="hidden md:flex items-center text-blue-800 gap-10">
+      <div className="hidden md:flex items-center text-2xl font-semibold text-blue-900 gap-10">
         <div className="px-3 py-1 rounded-lg cursor-pointer hover:bg-teal-50 hover:text-teal-600 hover:scale-105 transition-all duration-200">
-          Topics
+          Tests
         </div>
         <div className="px-3 py-1 rounded-lg cursor-pointer hover:bg-teal-50 hover:text-teal-600 hover:scale-105 transition-all duration-200">
           Features
@@ -40,7 +40,7 @@ const NavBar = () => {
         <button
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
           onClick={() => setIsOpen(!isOpen)}
-          className="cursor-pointer text-blue-800 p-2 rounded-md hover:bg-teal-50 transition-colors"
+          className="cursor-pointer text-blue-900 p-2 font-semibold rounded-md hover:bg-teal-50 transition-colors"
         >
           {/* Hamburger icon */}
           <svg
@@ -67,9 +67,9 @@ const NavBar = () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center gap-6 py-6 text-blue-800 md:hidden z-50">
+        <div className="absolute top-16 left-0 w-full bg-white shadow-md flex flex-col items-center gap-6 py-6 text-2xl font-semibold text-blue-900 md:hidden z-50">
           <div className="px-3 py-1 rounded-lg cursor-pointer hover:bg-teal-50 hover:text-teal-600 transition-all duration-200">
-            Topics
+            Tests
           </div>
           <div className="px-3 py-1 rounded-lg cursor-pointer hover:bg-teal-50 hover:text-teal-600 transition-all duration-200">
             Features

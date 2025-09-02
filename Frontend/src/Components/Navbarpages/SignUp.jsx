@@ -3,7 +3,7 @@ import image from "../../assets/image.png";
 
 const SignUp = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-emerald-300 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-white to-emerald-200 py-16">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-xl bg-white overflow-hidden">
         <div className="hidden md:flex items-center justify-center  p-8">
           <img
@@ -21,7 +21,7 @@ const SignUp = () => {
             Join to practice aptitude, track progress, and improve faster.
           </p>
 
-          <form className="mt-8 space-y-5">
+          <form onSubmit="/login" className="mt-8 space-y-5">
             <div>
               <label className="block text-sm font-semibold text-blue-900">
                 Full name

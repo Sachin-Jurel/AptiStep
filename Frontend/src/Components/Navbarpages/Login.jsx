@@ -3,7 +3,7 @@ import loginImage from "../../assets/loginImage.png";
 
 const Login = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-emerald-300  py-16">
+    <div className="min-h-screen bg-gradient-to-b from-white to-emerald-200  py-16">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-xl bg-white overflow-hidden">
         <div className="p-8 sm:p-10">
           <h1 className="text-2xl sm:text-3xl font-extrabold text-blue-900">
