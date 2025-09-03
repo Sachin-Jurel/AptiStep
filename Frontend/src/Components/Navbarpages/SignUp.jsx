@@ -1,5 +1,6 @@
 import React from "react";
 import image from "../../assets/image.png";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   return (
@@ -92,9 +93,9 @@ const SignUp = () => {
 
             <div className="text-sm text-gray-600 text-center">
               Already have an account?{" "}
-              <span className="text-emerald-700 font-semibold cursor-pointer">
+              <Link to="/login" className="text-emerald-700 font-semibold cursor-pointer">
                 Log in
-              </span>
+              </Link>
             </div>
           </form>
         </div>
