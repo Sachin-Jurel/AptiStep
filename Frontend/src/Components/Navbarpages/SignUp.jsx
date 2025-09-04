@@ -1,8 +1,29 @@
-import React from "react";
+import React, {useState} from "react";
 import image from "../../assets/image.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const SignUp = () => {
+  const [UserData, setUserData] = React.useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const  handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8080/signup', {
+        username: UserData.name,
+        email: UserData.email,
+        password: UserData.password,
+      });
+      console.log('User registered successfully:', response.data);
+    } catch (error) {
+      console.error('Error registering user:', error);
+    }
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-emerald-200 py-16">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-xl bg-white overflow-hidden">
@@ -22,7 +43,7 @@ const SignUp = () => {
             Join to practice aptitude, track progress, and improve faster.
           </p>
 
-          <form onSubmit="/login" className="mt-8 space-y-5">
+          <form onSubmit={handleSubmit} className="mt-8 space-y-5">
             <div>
               <label className="block text-sm font-semibold text-blue-900">
                 Full name
@@ -30,6 +51,8 @@ const SignUp = () => {
               <input
                 type="text"
                 required
+                value={UserData.name}
+                onChange={(e) => setUserData({...UserData, name: e.target.value})}
                 placeholder="John Doe"
                 className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -43,6 +66,8 @@ const SignUp = () => {
                 type="email"
                 required
                 placeholder="you@example.com"
+                value={UserData.email}
+                onChange={(e) => setUserData({...UserData, email: e.target.value})}
                 className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -55,6 +80,8 @@ const SignUp = () => {
                 <input
                   type="password"
                   required
+                  value={UserData.password}
+                  onChange={(e) => setUserData({...UserData, password: e.target.value})}
                   placeholder="••••••••"
                   className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -86,7 +113,7 @@ const SignUp = () => {
 
             <button
               type="submit"
-              className="w-full bg-emerald-500 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200"
+              className="w-full bg-emerald-500 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200"
             >
               Create account
             </button>

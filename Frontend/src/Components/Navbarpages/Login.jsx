@@ -1,8 +1,24 @@
 import React from "react";
 import loginImage from "../../assets/loginImage.png";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
+  const [UserData, setUserData] = React.useState({
+    email: "",
+    password: ""
+  })
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("http://localhost:8080/login",{
+        email: UserData.email,
+        password: UserData.password,
+      })
+    } catch (err) {
+      console.error('Error registering user:', err);
+    }
+  }
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-emerald-200  py-16">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-xl bg-white overflow-hidden">
@@ -14,7 +30,7 @@ const Login = () => {
             Join to practice aptitude, track progress, and improve faster.
           </p>
 
-          <form className="mt-8 space-y-5">
+          <form onSubmit={handleSubmit} className="mt-8 space-y-5">
 
             <div>
               <label className="block text-sm font-semibold text-blue-900">
@@ -23,6 +39,8 @@ const Login = () => {
               <input
                 type="email"
                 required
+                value={UserData.email}
+                onChange={(e)=> setUserData({...UserData, email: e.target.value})}
                 placeholder="you@example.com"
                 className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -36,6 +54,8 @@ const Login = () => {
                 <input
                   type="password"
                   required
+                  value={UserData.password}
+                  onChange={(e)=> setUserData({...UserData, password: e.target.value})}
                   placeholder="••••••••"
                   className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
                 />
