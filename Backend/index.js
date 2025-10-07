@@ -17,7 +17,8 @@ app.get('/', (req, res)=>{
 app.post('/signup', async (req, res)=>{
     const {username, email, password} = req.body;
     const User = await userModel.create({username, email, password});
-    res.json(User);
+    const existUser = await userModel.findOne({email});
+    res.json(existUser);
 })
 
 app.post('/login', async (req, res)=>{

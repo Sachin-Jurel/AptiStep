@@ -5,7 +5,7 @@ import Footer from "./Components/Home/Footer";
 import SignUp from "./Components/Navbarpages/SignUp";
 import "./index.css";
 import Login from "./Components/Navbarpages/Login";
-import Profile from "./Components/Navbarpages/Profile";
+import Profile from "./Components/profile/Profile";
 
 const App = () => {
   return (
@@ -17,6 +17,7 @@ const App = () => {
             <Route path="/" element={<MainSection />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </div>
         <Footer />

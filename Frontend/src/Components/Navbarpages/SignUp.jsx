@@ -1,7 +1,9 @@
-import React, {useState} from "react";
+import React, { useState , useContext} from "react";
 import image from "../../assets/image.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import {UserContext} from "../../context/userContext";
+
 
 const SignUp = () => {
   const [UserData, setUserData] = React.useState({
@@ -9,23 +11,26 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
-  const  handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/signup', {
+      const response = await axios.post("http://localhost:8080/signup", {
         username: UserData.name,
         email: UserData.email,
         password: UserData.password,
       });
-      console.log('User registered successfully:', response.data);
+      setUser(response.data);
+      navigate("/profile");
     } catch (error) {
-      console.error('Error registering user:', error);
+      console.error("Error registering user:", error);
     }
-  }
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-emerald-200 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-white to-emerald-200 py-0">
       <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 rounded-2xl shadow-xl bg-white overflow-hidden">
         <div className="hidden md:flex items-center justify-center  p-8">
           <img
@@ -52,7 +57,9 @@ const SignUp = () => {
                 type="text"
                 required
                 value={UserData.name}
-                onChange={(e) => setUserData({...UserData, name: e.target.value})}
+                onChange={(e) =>
+                  setUserData({ ...UserData, name: e.target.value })
+                }
                 placeholder="John Doe"
                 className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
@@ -67,7 +74,9 @@ const SignUp = () => {
                 required
                 placeholder="you@example.com"
                 value={UserData.email}
-                onChange={(e) => setUserData({...UserData, email: e.target.value})}
+                onChange={(e) =>
+                  setUserData({ ...UserData, email: e.target.value })
+                }
                 className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
@@ -81,7 +90,9 @@ const SignUp = () => {
                   type="password"
                   required
                   value={UserData.password}
-                  onChange={(e) => setUserData({...UserData, password: e.target.value})}
+                  onChange={(e) =>
+                    setUserData({ ...UserData, password: e.target.value })
+                  }
                   placeholder="••••••••"
                   className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
                 />
@@ -111,16 +122,19 @@ const SignUp = () => {
               </label>
             </div>
 
-            <button
-              type="submit"
-              className="w-full bg-emerald-500 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200"
-            >
-              Create account
-            </button>
+              <button
+                type="submit"
+                className="w-full bg-emerald-500 mb-5 hover:bg-emerald-700 text-white font-semibold py-3 rounded-lg transition-colors duration-200"
+              >
+                Create account
+              </button>
 
             <div className="text-sm text-gray-600 text-center">
               Already have an account?{" "}
-              <Link to="/login" className="text-emerald-700 font-semibold cursor-pointer">
+              <Link
+                to="/login"
+                className="text-emerald-700 font-semibold cursor-pointer"
+              >
                 Log in
               </Link>
             </div>

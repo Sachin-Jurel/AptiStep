@@ -1,1 +1,12 @@
 @import "tailwindcss";
+
+.dp{
+    height: 230px;
+    width: 230px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.dp:hover {
+    transform: scale(1.05);
+}
