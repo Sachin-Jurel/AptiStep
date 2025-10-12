@@ -12,7 +12,6 @@ const SignUp = () => {
     password: "",
   });
   const navigate = useNavigate();
-  const { setUser } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,8 +20,10 @@ const SignUp = () => {
         username: UserData.name,
         email: UserData.email,
         password: UserData.password,
+      },
+      {
+        withCredentials: true, 
       });
-      setUser(response.data);
       navigate("/profile");
     } catch (error) {
       console.error("Error registering user:", error);

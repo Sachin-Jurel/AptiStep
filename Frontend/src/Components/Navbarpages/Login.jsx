@@ -16,7 +16,10 @@ const Login = () => {
       const response = await axios.post("http://localhost:8080/login",{
         email: UserData.email,
         password: UserData.password,
+      },{
+        withCredentials: true, 
       })
+      navigate("/profile");
     } catch (err) {
       console.error('Error registering user:', err);
     }
