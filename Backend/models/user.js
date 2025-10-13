@@ -22,6 +22,22 @@ const UserSchema = new mongoose.Schema({
     required: true,
     minlength: 8 
   },
+  college: {
+    type: String,
+    required: true,
+    trim: true, 
+  },
+  about : {
+    type: String,
+    required: true,
+    trim: true, 
+    minlength: 3,
+    maxlength: 100
+  },
+  profilePic:{
+    type: String,
+    trim: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now

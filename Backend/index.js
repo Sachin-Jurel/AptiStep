@@ -105,6 +105,11 @@ app.post("/logout", (req,res)=>{
   return res.json({ message: "Logged out successfully" });
 })
 
+app.put("/user/update", (req,res)=>{
+  const {Data} = req.body;
+  console.log(Data);
+})
+
 app.listen("8080", () => {
   console.log("server is running on port 8080");
 });

@@ -22,11 +22,6 @@ const Profile = () => {
           return;
         }
         
-        // Check for image in localStorage
-        const localImage = localStorage.getItem('profileImage');
-        if (localImage) {
-          res.data.profilePic = localImage;
-        }
         
         setUser(res.data);
         setuser(res.data);
