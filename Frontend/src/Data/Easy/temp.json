@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "What is the sum of the first 50 natural numbers?",
+    "options": ["1275", "1250", "1300", "1225"],
+    "answer": "1275"
+  },
+  {
+    "id": 2,
+    "question": "If x² - 5x + 6 = 0, find the value of x.",
+    "options": ["2 or 3", "1 or 6", "3 or 4", "0 or 6"],
+    "answer": "2 or 3"
+  },
+  {
+    "id": 3,
+    "question": "The average of five numbers is 20. If one number is 30, what is the average of the remaining four numbers?",
+    "options": ["17.5", "18", "19", "20"],
+    "answer": "18"
+  },
+  {
+    "id": 4,
+    "question": "A train running at 60 km/h crosses a pole in 18 seconds. Find the length of the train.",
+    "options": ["300 m", "250 m", "290 m", "320 m"],
+    "answer": "300 m"
+  },
+  {
+    "id": 5,
+    "question": "What is the remainder when 2^10 is divided by 7?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "2"
+  },
+  {
+    "id": 6,
+    "question": "If A + B = 180° in a triangle, find angle C.",
+    "options": ["90°", "180°", "0°", "Cannot determine"],
+    "answer": "Cannot determine"
+  },
+  {
+    "id": 7,
+    "question": "Find the next number in the series: 3, 6, 12, 24, ?",
+    "options": ["36", "48", "54", "60"],
+    "answer": "48"
+  },
+  {
+    "id": 8,
+    "question": "Which of the following numbers is a perfect square?",
+    "options": ["144", "150", "121", "143"],
+    "answer": "144"
+  },
+  {
+    "id": 9,
+    "question": "Speed of a boat in still water is 15 km/h. If the speed of the stream is 3 km/h, find the time to travel 24 km downstream.",
+    "options": ["1 hr", "1.2 hr", "1.5 hr", "2 hr"],
+    "answer": "1.2 hr"
+  },
+  {
+    "id": 10,
+    "question": "In a class, 40% of students play cricket and 30% play football. If 10% play both, find the percentage of students who play either cricket or football.",
+    "options": ["60%", "50%", "70%", "65%"],
+    "answer": "60%"
+  }
+]

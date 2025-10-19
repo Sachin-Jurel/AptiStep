@@ -24,7 +24,7 @@ const SignUp = () => {
       {
         withCredentials: true, 
       });
-      navigate("/profile");
+      navigate("/user");
     } catch (error) {
       console.error("Error registering user:", error);
     }
@@ -51,7 +51,7 @@ const SignUp = () => {
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
             <div>
-              <label className="block text-sm font-semibold text-blue-900">
+              <label className="block text-m font-bold text-blue-900">
                 Full name
               </label>
               <input
@@ -62,12 +62,12 @@ const SignUp = () => {
                   setUserData({ ...UserData, name: e.target.value })
                 }
                 placeholder="John Doe"
-                className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-2 w-full text-emerald-800 font-bold font-mono text-1xl rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-blue-900">
+              <label className="block text-m font-bold text-blue-900">
                 Email
               </label>
               <input
@@ -78,13 +78,13 @@ const SignUp = () => {
                 onChange={(e) =>
                   setUserData({ ...UserData, email: e.target.value })
                 }
-                className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-2 text-emerald-800 font-bold font-mono text-1xl w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-blue-900">
+                <label className="block text-m font-bold text-blue-900">
                   Password
                 </label>
                 <input
@@ -95,18 +95,18 @@ const SignUp = () => {
                     setUserData({ ...UserData, password: e.target.value })
                   }
                   placeholder="••••••••"
-                  className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 w-full text-emerald-800 font-bold font-mono text-1xl rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-blue-900">
+                <label className="block text-m font-bold text-blue-900">
                   Confirm password
                 </label>
                 <input
                   type="password"
                   required
                   placeholder="••••••••"
-                  className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 text-emerald-800 font-bold font-mono text-1xl w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>

@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import ProfileImage from "../../assets/Profile-image.png";
 import "../../index.css";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 import { UserContext } from "../../context/userContext";
 import { useNavigate, Link } from "react-router-dom";
+import ProfileImage from "../../assets/default.png";
 
 const Profile = () => {
   const [user, setuser] = useState();
@@ -59,18 +59,15 @@ const Profile = () => {
           <div className="bg-white/80 backdrop-blur-sm shadow-2xl rounded-3xl overflow-hidden border border-white/20">
             <div className="flex flex-col lg:flex-row">
               {/* Profile Image Section */}
-              <div className="lg:w-1/3 bg-gradient-to-br from-blue-950 via-teal-600 to-emerald-500 p-8 flex flex-col items-center justify-center relative">
+              <div className="lg:w-1/3 bg-gradient-to-br from-blue-950 via-teal-600 to-emerald-500 px-8 flex flex-col items-center justify-center relative">
                 <div className="relative z-10 text-center">
                   {/* Profile Image */}
                   <div className="relative mb-6">
                     <img
                       src={user?.profilePic || ProfileImage}
-                      alt="Profile"
-                      className="w-32 h-32 rounded-full shadow-xl border-4 border-white/30 object-cover mx-auto"
+                    alt="Profile"
+                      className="w-50 h-50 rounded-full shadow-xl border-4 border-white/30 object-cover mx-auto"
                     />
-                    <div className="absolute -bottom-1 -right-1 bg-emerald-500 w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
-                      <div className="w-2 h-2 bg-white rounded-full"></div>
-                    </div>
                   </div>
 
                   {/* User Info */}
@@ -90,7 +87,7 @@ const Profile = () => {
                         <span className="text-xs font-semibold text-emerald-100 uppercase tracking-wider font-sans">About</span>
                       </div>
                       <p className="text-white text-sm leading-relaxed text-center font-sans font-medium">
-                        {user?.userBio || "Passionate learner and problem solver"}
+                        {user?.bio || "Passionate learner and problem solver"}
                       </p>
                     </div>
                   </div>
@@ -111,8 +108,8 @@ const Profile = () => {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                           </svg>
                           <h2 className="text-2xl font-bold text-blue-950 font-sans">
-                            {user?.college_name || "College name"}
-                          </h2>
+                            {user?.college || "College name"}
+                  </h2>
                         </div>
                         <div className="flex items-center">
                           <div className="bg-gradient-to-r from-emerald-100 to-teal-100 px-3 py-1 rounded-full">
@@ -143,7 +140,7 @@ const Profile = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="text-3xl font-bold text-blue-950 mb-1">
-                          {user?.score || "0"}
+                      {user?.score || "0"}
                         </div>
                         <div className="text-sm text-blue-900 font-medium">Total Score</div>
                       </div>
@@ -159,7 +156,7 @@ const Profile = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="text-3xl font-bold text-teal-700 mb-1">
-                          {user?.testsCompleted || "0"}
+                      {user?.testsCompleted || "0"}
                         </div>
                         <div className="text-sm text-teal-600 font-medium">Tests Completed</div>
                       </div>
@@ -175,7 +172,7 @@ const Profile = () => {
                     <div className="flex items-center justify-between">
                       <div>
                         <div className="text-3xl font-bold text-emerald-700 mb-1">
-                          {user?.rank || "N/A"}
+                      {user?.rank || "N/A"}
                         </div>
                         <div className="text-sm text-emerald-600 font-medium">Current Rank</div>
                       </div>
@@ -191,7 +188,7 @@ const Profile = () => {
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link 
-                    to="/profile/edit"
+                    to="/user/edit"
                     className="bg-gradient-to-r from-blue-950 to-teal-600 hover:from-blue-900 hover:to-teal-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-center"
                   >
                     ✏️ Edit Profile
@@ -218,8 +215,8 @@ const Profile = () => {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800">
-                  Recent Activity
-                </h3>
+                Recent Activity
+              </h3>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center p-4 bg-gradient-to-r from-emerald-50 to-emerald-100 rounded-2xl border border-emerald-200 hover:shadow-lg transition-all duration-300">
@@ -227,7 +224,7 @@ const Profile = () => {
                   <div className="flex-1">
                     <span className="text-sm font-medium text-gray-800">
                       🎯 Completed Aptitude Test #1
-                    </span>
+                  </span>
                     <div className="text-xs text-gray-600 mt-1">Scored 85% in Quantitative Aptitude</div>
                   </div>
                   <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">
@@ -239,7 +236,7 @@ const Profile = () => {
                   <div className="flex-1">
                     <span className="text-sm font-medium text-gray-800">
                       📝 Updated Profile Information
-                    </span>
+                  </span>
                     <div className="text-xs text-gray-600 mt-1">Added new skills and achievements</div>
                   </div>
                   <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">
@@ -251,7 +248,7 @@ const Profile = () => {
                   <div className="flex-1">
                     <span className="text-sm font-medium text-gray-800">
                       🚀 Started Practice Session
-                    </span>
+                  </span>
                     <div className="text-xs text-gray-600 mt-1">Logical Reasoning practice</div>
                   </div>
                   <span className="text-xs text-gray-500 bg-white px-2 py-1 rounded-full">
@@ -270,8 +267,8 @@ const Profile = () => {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800">
-                  Performance Overview
-                </h3>
+                Performance Overview
+              </h3>
               </div>
               <div className="space-y-6">
                 <div>
@@ -298,7 +295,7 @@ const Profile = () => {
                     ></div>
                   </div>
                 </div>
-                <div>
+          <div>
                   <div className="flex justify-between items-center mb-3">
                     <span className="text-sm font-semibold text-gray-700">📚 Verbal Ability</span>
                     <span className="text-lg font-bold text-blue-950">68%</span>

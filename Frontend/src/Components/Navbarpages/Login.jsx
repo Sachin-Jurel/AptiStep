@@ -19,7 +19,7 @@ const Login = () => {
       },{
         withCredentials: true, 
       })
-      navigate("/profile");
+      navigate("/user");
     } catch (err) {
       console.error('Error registering user:', err);
     }
@@ -38,7 +38,7 @@ const Login = () => {
           <form onSubmit={handleSubmit} className="mt-8 space-y-5">
 
             <div>
-              <label className="block text-sm font-semibold text-blue-900">
+              <label className="block text-m font-bold text-blue-900">
                 Email
               </label>
               <input
@@ -47,13 +47,13 @@ const Login = () => {
                 value={UserData.email}
                 onChange={(e)=> setUserData({...UserData, email: e.target.value})}
                 placeholder="you@example.com"
-                className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                className="mt-2 w-full rounded-lg border border-gray-200 text-emerald-800 font-bold font-mono text-1xl px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-semibold text-blue-900">
+                <label className="block text-m font-bold text-blue-900">
                   Password
                 </label>
                 <input
@@ -62,7 +62,7 @@ const Login = () => {
                   value={UserData.password}
                   onChange={(e)=> setUserData({...UserData, password: e.target.value})}
                   placeholder="••••••••"
-                  className="mt-2 w-full rounded-lg border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
+                  className="mt-2 w-full rounded-lg text-emerald-800 font-bold font-mono text-1xl border border-gray-200 px-4 py-3 outline-none focus:ring-2 focus:ring-blue-500"
                 />
               </div>
             </div>

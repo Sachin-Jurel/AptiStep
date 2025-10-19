@@ -1,6 +1,30 @@
 import React from "react";
+import { useContext,useEffect } from "react";
+import {  useNavigate } from "react-router-dom";
+import {UserContext} from "../../context/userContext";
+import axios from "axios";
 
 const Test = () => {
+  const { user, setUser } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchTest = async () => {
+      try {
+        const res = await axios.post(
+          "http://localhost:8080/user/test",
+          {},
+          { withCredentials: true } 
+        );
+        setUser(res.data);
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Error fetching test");
+      }
+    };
+
+    fetchTest();
+  }, []);
   const testTopics = [
     {
       id: 1,
@@ -91,6 +115,7 @@ const Test = () => {
     return difficultyMap[difficulty] || "bg-gray-100 text-gray-800";
   };
 
+
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="max-w-7xl mx-auto px-4">
@@ -118,15 +143,9 @@ const Test = () => {
                   Progress Tracking
                 </span>
               </div>
-              <button
-                  onClick={() => {
-                    // Navigate to specific test or show test instructions
-                    alert(`Starting ${topic.title} test!`);
-                  }}
-                  className={`w-50 m-5 bg-gradient-to-r bg-blue-950 hover:opacity-90 text-white py-3 rounded-lg font-semibold transition-all duration-300`}
-                >
-                  Start Test
-                </button>
+              <button onClick={() => navigate(`/test/${user._id}`)} className={`w-50 m-5 bg-gradient-to-r bg-blue-950 hover:opacity-90 text-white py-3 rounded-lg font-semibold transition-all duration-300`}>
+                Start Test
+              </button>
             </div>
           </div>
         </div>
