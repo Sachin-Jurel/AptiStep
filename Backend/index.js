@@ -126,15 +126,21 @@ app.put("/user/edit", upload.single("avatar"), async (req, res) => {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const userId = decoded.id;
 
-    let updateData = { username, college, bio };
+    const existingUser = await userModel.findById(userId);
+    if (!existingUser) return res.status(404).json({ error: "User not found" });
+
+    let updateData = {
+      username: username || existingUser.username,
+      college: college || existingUser.college,
+      bio: bio || existingUser.bio,
+      profilePic: existingUser.profilePic,
+    };
 
     if (req.file) {
       updateData.profilePic = req.file.path;
     }
 
     const updatedUser = await userModel.findByIdAndUpdate(userId, updateData, { new: true });
-
-    if (!updatedUser) return res.status(404).json({ error: "User not found" });
 
     res.status(200).json({ message: "Profile updated", updatedUser });
   } catch (error) {
@@ -143,23 +149,19 @@ app.put("/user/edit", upload.single("avatar"), async (req, res) => {
   }
 });
 
-
-app.post("/uploads", upload.single("avatar"), async (req, res) => {
+app.post("/user/test", upload.single("avatar"), async (req, res) => {
   try {
     const token = req.cookies.token;
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    const updatedUser = await userModel.findByIdAndUpdate(
-      decoded.id,
-      { profilePic: req.file.path },
-    ).select("-password");
+    const updatedUser = await userModel.findById(decoded.id)
+    .select("-password");
     res.json({ message: "Profile updated", updatedUser });
   } catch (err) {
     console.error("Upload error:", err);
     res.status(500).json({ error: err.message });
   }
 });
-
 
 app.listen("8080", () => {
   console.log("server is running on port 8080");

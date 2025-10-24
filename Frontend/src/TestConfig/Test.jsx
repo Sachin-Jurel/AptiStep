@@ -17,7 +17,7 @@ const TestAttempt = () => {
           {},
           { withCredentials: true } 
         );
-        setUser(res.data);
+        setUser(res.data.updatedUser);
       } catch (error) {
         console.error("Error:", error);
         alert("Error fetching test");

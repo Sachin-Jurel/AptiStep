@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import "../../index.css";
+import "../index.css";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
-import { UserContext } from "../../context/userContext";
+import { UserContext } from "../context/userContext";
 import { useNavigate, Link } from "react-router-dom";
-import ProfileImage from "../../assets/default.png";
+import ProfileImage from "../assets/default.png";
 
 const Profile = () => {
   const [user, setuser] = useState();

@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext,useEffect } from "react";
 import {  useNavigate } from "react-router-dom";
-import {UserContext} from "../../context/userContext";
+import {UserContext} from "../context/userContext";
 import axios from "axios";
 
 const Test = () => {
@@ -16,7 +16,8 @@ const Test = () => {
           {},
           { withCredentials: true } 
         );
-        setUser(res.data);
+        console.log("Test data:", res.data.updatedUser);
+        setUser(res.data.updatedUser);
       } catch (error) {
         console.error("Error:", error);
         alert("Error fetching test");

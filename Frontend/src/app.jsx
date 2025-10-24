@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import NavBar from "./Components/Home/Navbar";
-import MainSection from "./Components/Home/MainPage";
-import Footer from "./Components/Home/Footer";
-import SignUp from "./Components/Navbarpages/SignUp";
+import NavBar from "./Components/Navbar";
+import MainSection from "./Pages/Home.jsx";
+import Footer from "./Components/Footer";
+import SignUp from "./Pages/SignUp.jsx";
 import "./index.css";
-import Login from "./Components/Navbarpages/Login";
-import Profile from "./Components/profile/Profile";
-import EditProfile from "./Components/profile/EditProfile";
-import Test from "./Components/Navbarpages/Test";
+import Login from "./Pages/Login.jsx";
+import Profile from "./Pages/Profile.jsx";
+import EditProfile from "./Pages/EditProfile.jsx";
+import Test from "./Pages/Test.jsx";
+import TestAttempt from "./TestConfig/Test.jsx";
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/user" element={<Profile />} />
             <Route path="/user/edit" element={<EditProfile />} />
             <Route path="/test" element={<Test />} />
+            <Route path="/test/:id" element={<TestAttempt />} />
           </Routes>
         </div>
         <Footer />

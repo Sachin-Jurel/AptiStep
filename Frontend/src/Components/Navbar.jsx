@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import addUserIcon from "../../assets/add-user.png";
-import loginIcon from "../../assets/login.png";
-import logoIcon from "../../assets/logo.png";
-import ProfileImage from "../../assets/default.png"; 
-import { UserContext } from "../../context/userContext"; 
+import addUserIcon from "../assets/add-user.png";
+import loginIcon from "../assets/login.png";
+import logoIcon from "../assets/logo.png";
+import ProfileImage from "../assets/default.png"; 
+import { UserContext } from "../context/userContext"; 
 
 const NavBar = () => {
   const { user } = useContext(UserContext); 

@@ -1,8 +1,7 @@
 import React, { useState , useContext} from "react";
-import image from "../../assets/image.png";
+import image from "../assets/image.png";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
-import {UserContext} from "../../context/userContext";
 
 
 const SignUp = () => {

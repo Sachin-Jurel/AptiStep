@@ -1,5 +1,5 @@
 import React from "react";
-import loginImage from "../../assets/loginImage.png";
+import loginImage from "../assets/loginImage.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
