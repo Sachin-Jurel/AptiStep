@@ -8,6 +8,7 @@ const TestAttempt = () => {
   const { id } = useParams(); // get test id from URL
   const navigate = useNavigate();
   const {user, setUser}= useContext(UserContext)
+  const [count, setCount] = useState(0);
   
   useEffect(() => {
     const fetchTest = async () => {
@@ -29,17 +30,19 @@ const TestAttempt = () => {
   const [answers, setAnswers] = useState({});
 
   // handle selecting an answer
-  const handleSelect = (qId, option) => {
+  const handleSelect = (qId, answer, option) => {
     setAnswers({ ...answers, [qId]: option });
+    
+    if(answer === option){
+      setCount(count + 1);
+      console.log("right answer");
+    }
   };
 
-  // handle submit
+ 
   const handleSubmit = () => {
-    // for now, just log answers
-    console.log("Submitted answers:", answers);
-
-    // navigate to result page
-    navigate(`/test/result/${id}`, { state: { answers } });
+    console.log("Submitted answers:", count);
+    // navigate(`/test/result/${id}`, { state: { answers } });
   };
 
   return (
@@ -63,7 +66,7 @@ const TestAttempt = () => {
                     name={`question-${q.id}`}
                     value={opt}
                     checked={answers[q.id] === opt}
-                    onChange={() => handleSelect(q.id, opt)}
+                    onChange={() => handleSelect(q.id,q.answer, opt)}
                   />
                   <span>{opt}</span>
                 </label>
