@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Quantitative Aptitude",
+    "description": "Test your mathematical and numerical reasoning skills",
+    "questions": 25,
+    "duration": "45 minutes",
+    "difficulty": "Medium",
+    "icon": "🔢",
+    "color": "blue",
+    "topics": ["Arithmetic", "Algebra", "Geometry", "Statistics", "Probability"]
+  },
+  {
+    "id": 2,
+    "title": "Logical Reasoning",
+    "description": "Evaluate your analytical and logical thinking abilities",
+    "questions": 20,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "icon": "🧠",
+    "color": "green",
+    "topics": ["Pattern Recognition", "Analytical Reasoning", "Syllogism", "Blood Relations", "Direction Sense"]
+  },
+  {
+    "id": 3,
+    "title": "Verbal Ability",
+    "description": "Assess your English language and communication skills",
+    "questions": 30,
+    "duration": "40 minutes",
+    "difficulty": "Easy",
+    "icon": "📝",
+    "color": "purple",
+    "topics": ["Grammar", "Vocabulary", "Reading Comprehension", "Synonyms", "Antonyms"]
+  },
+  {
+    "id": 4,
+    "title": "Data Interpretation",
+    "description": "Test your ability to analyze and interpret data",
+    "questions": 15,
+    "duration": "25 minutes",
+    "difficulty": "Hard",
+    "icon": "📊",
+    "color": "orange",
+    "topics": ["Charts", "Graphs", "Tables", "Pie Charts", "Bar Graphs"]
+  },
+  {
+    "id": 5,
+    "title": "General Knowledge",
+    "description": "Check your awareness of current affairs and general knowledge",
+    "questions": 20,
+    "duration": "30 minutes",
+    "difficulty": "Easy",
+    "icon": "🌍",
+    "color": "teal",
+    "topics": ["Current Affairs", "History", "Geography", "Science", "Sports"]
+  },
+  {
+    "id": 6,
+    "title": "Computer Awareness",
+    "description": "Evaluate your knowledge of computer fundamentals",
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "icon": "💻",
+    "color": "indigo",
+    "topics": ["Hardware", "Software", "Networking", "Programming", "Database"]
+  }
+]

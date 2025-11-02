@@ -3,6 +3,8 @@ import { useContext,useEffect } from "react";
 import {  useNavigate } from "react-router-dom";
 import {UserContext} from "../context/userContext";
 import axios from "axios";
+import TestTopics from "../AdditionalData/TestTopics.json"
+import TestCards from "../Components/TestCards";
 
 const Test = () => {
   const { user, setUser } = useContext(UserContext);
@@ -16,7 +18,6 @@ const Test = () => {
           {},
           { withCredentials: true } 
         );
-        console.log("Test data:", res.data.updatedUser);
         setUser(res.data.updatedUser);
       } catch (error) {
         console.error("Error:", error);
@@ -25,97 +26,7 @@ const Test = () => {
     };
 
     fetchTest();
-  }, []);
-  const testTopics = [
-    {
-      id: 1,
-      title: "Quantitative Aptitude",
-      description: "Test your mathematical and numerical reasoning skills",
-      questions: 25,
-      duration: "45 minutes",
-      difficulty: "Medium",
-      icon: "🔢",
-      color: "blue",
-      topics: ["Arithmetic", "Algebra", "Geometry", "Statistics", "Probability"]
-    },
-    {
-      id: 2,
-      title: "Logical Reasoning",
-      description: "Evaluate your analytical and logical thinking abilities",
-      questions: 20,
-      duration: "35 minutes",
-      difficulty: "Medium",
-      icon: "🧠",
-      color: "green",
-      topics: ["Pattern Recognition", "Analytical Reasoning", "Syllogism", "Blood Relations", "Direction Sense"]
-    },
-    {
-      id: 3,
-      title: "Verbal Ability",
-      description: "Assess your English language and communication skills",
-      questions: 30,
-      duration: "40 minutes",
-      difficulty: "Easy",
-      icon: "📝",
-      color: "purple",
-      topics: ["Grammar", "Vocabulary", "Reading Comprehension", "Synonyms", "Antonyms"]
-    },
-    {
-      id: 4,
-      title: "Data Interpretation",
-      description: "Test your ability to analyze and interpret data",
-      questions: 15,
-      duration: "25 minutes",
-      difficulty: "Hard",
-      icon: "📊",
-      color: "orange",
-      topics: ["Charts", "Graphs", "Tables", "Pie Charts", "Bar Graphs"]
-    },
-    {
-      id: 5,
-      title: "General Knowledge",
-      description: "Check your awareness of current affairs and general knowledge",
-      questions: 20,
-      duration: "30 minutes",
-      difficulty: "Easy",
-      icon: "🌍",
-      color: "teal",
-      topics: ["Current Affairs", "History", "Geography", "Science", "Sports"]
-    },
-    {
-      id: 6,
-      title: "Computer Awareness",
-      description: "Evaluate your knowledge of computer fundamentals",
-      questions: 25,
-      duration: "35 minutes",
-      difficulty: "Medium",
-      icon: "💻",
-      color: "indigo",
-      topics: ["Hardware", "Software", "Networking", "Programming", "Database"]
-    }
-  ];
-
-  const getColorClasses = (color) => {
-    const colorMap = {
-      blue: "from-blue-500 to-blue-600",
-      green: "from-green-500 to-green-600",
-      purple: "from-purple-500 to-purple-600",
-      orange: "from-orange-500 to-orange-600",
-      teal: "from-teal-500 to-teal-600",
-      indigo: "from-indigo-500 to-indigo-600"
-    };
-    return colorMap[color] || "from-gray-500 to-gray-600";
-  };
-
-  const getDifficultyColor = (difficulty) => {
-    const difficultyMap = {
-      Easy: "bg-green-100 text-green-800",
-      Medium: "bg-yellow-100 text-yellow-800",
-      Hard: "bg-red-100 text-red-800"
-    };
-    return difficultyMap[difficulty] || "bg-gray-100 text-gray-800";
-  };
-
+  }, [setUser]);
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
@@ -151,63 +62,7 @@ const Test = () => {
           </div>
         </div>
 
-        {/* Test Topics Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {testTopics.map((topic) => (
-            <div
-              key={topic.id}
-              className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
-            >
-              {/* Topic Header */}
-              <div className={`bg-gradient-to-r ${getColorClasses(topic.color)} p-6 rounded-t-2xl text-white`}>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-3xl">{topic.icon}</span>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getDifficultyColor(topic.difficulty)} bg-white`}>
-                    {topic.difficulty}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">{topic.title}</h3>
-                <p className="text-sm opacity-90">{topic.description}</p>
-              </div>
-
-              {/* Topic Details */}
-              <div className="p-6">
-                <div className="grid grid-cols-2 gap-4 mb-4">
-                  <div className="text-center p-3 bg-gray-50 rounded-lg">
-                    <div className="text-lg font-bold text-gray-800">{topic.questions}</div>
-                    <div className="text-xs text-gray-600">Questions</div>
-                  </div>
-                  <div className="text-center p-3 bg-gray-50 rounded-lg">
-                    <div className="text-lg font-bold text-gray-800">{topic.duration}</div>
-                    <div className="text-xs text-gray-600">Duration</div>
-                  </div>
-                </div>
-
-                {/* Topics Covered */}
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-700 mb-2">Topics Covered:</h4>
-                  <div className="flex flex-wrap gap-1">
-                    {topic.topics.map((subtopic, index) => (
-                      <span
-                        key={index}
-                        className="px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full"
-                      >
-                        {subtopic}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Action Button */}
-                <button
-                  className={`w-full bg-gradient-to-r ${getColorClasses(topic.color)} hover:opacity-90 text-white py-3 rounded-lg font-semibold transition-all duration-300`}
-                >
-                  Let's Go
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
+        <TestCards topics={TestTopics} />
 
         {/* Quick Stats Section */}
         <div className="bg-white rounded-2xl shadow-lg p-8">
@@ -257,4 +112,4 @@ const Test = () => {
 
 export default Test;
 
-// https://www.figma.com/make/UUTJfU18AoIPlImFmSwab1/Hero-Section-Design?node-id=0-4&t=WHHz3dmH4DzLFgEf-0
+

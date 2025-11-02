@@ -24,12 +24,10 @@ const UserSchema = new mongoose.Schema({
   },
   college: {
     type: String,
-    required: true,
     trim: true, 
   },
   bio : {
     type: String,
-    required: true,
     trim: true, 
     minlength: 3,
     maxlength: 100

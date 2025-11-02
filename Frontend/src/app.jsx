@@ -8,7 +8,8 @@ import Login from "./Pages/Login.jsx";
 import Profile from "./Pages/Profile.jsx";
 import EditProfile from "./Pages/EditProfile.jsx";
 import Test from "./Pages/Test.jsx";
-import TestAttempt from "./TestConfig/Test.jsx";
+import TestAttempt from "./Pages/StartTest.jsx";
+import Quant from "./Pages/QuantPage.jsx";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/user/edit" element={<EditProfile />} />
             <Route path="/test" element={<Test />} />
             <Route path="/test/:id" element={<TestAttempt />} />
+            <Route path="/test/quant" element={<Quant />} />
           </Routes>
         </div>
         <Footer />
