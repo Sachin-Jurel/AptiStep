@@ -1,0 +1,25 @@
+[
+  {
+    "topic": "Test Your Aptitude Skills",
+    "Desc": "Choose from various topics and track your progress",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.",
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "questions": 20,
+    "duration": "25 min",
+    "difficulty": "Medium",
+    "topics": [
+      "Quantitative",
+      "Logical Reasoning",
+      "Verbal Ability",
+      "Data Interpretation",
+      "General Knowledge",
+      "Computer Awareness"
+    ],
+    "icon": "🎯"
+  }
+]

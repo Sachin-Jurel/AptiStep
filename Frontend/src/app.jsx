@@ -7,9 +7,14 @@ import "./index.css";
 import Login from "./Pages/Login.jsx";
 import Profile from "./Pages/Profile.jsx";
 import EditProfile from "./Pages/EditProfile.jsx";
-import Test from "./Pages/Test.jsx";
 import TestAttempt from "./Pages/StartTest.jsx";
-import Quant from "./Pages/QuantPage.jsx";
+import Quant from "./Pages/Quantitative/QuantPage.jsx";
+import Logical from "./Pages/Logical/LogicalPage.jsx";
+import Verbal from "./Pages/Verbal/VerbalPage.jsx";
+import DI from "./Pages/Data Interpretation/DI.jsx";
+import GK from "./Pages/GK/GK.jsx";
+import CA from "./Pages/Computer Awareness/CA.jsx";
+import MainTest from "./Pages/TestPage.jsx";
 
 const App = () => {
   return (
@@ -23,9 +28,14 @@ const App = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/user" element={<Profile />} />
             <Route path="/user/edit" element={<EditProfile />} />
-            <Route path="/test" element={<Test />} />
+            <Route path="/test" element={<MainTest />} />
             <Route path="/test/:id" element={<TestAttempt />} />
-            <Route path="/test/quant" element={<Quant />} />
+            <Route path="/test/Quantitative" element={<Quant />} />
+            <Route path="/test/logicalReasoning" element={<Logical />} />
+            <Route path="/test/verbalAbility" element={<Verbal />} />
+            <Route path="/test/dataInterpretation" element={<DI />} />
+            <Route path="/test/GeneralKnowledge" element={<GK />} />
+            <Route path="/test/computerAwareness" element={<CA />} />
           </Routes>
         </div>
         <Footer />

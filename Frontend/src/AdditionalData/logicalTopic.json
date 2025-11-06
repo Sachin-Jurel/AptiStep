@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "Pattern Recognition",
+    "icon": "🧩",
+    "subtopics": [
+        "Number Series",
+  "Letter Series",
+  "Mixed Series",
+  "Analogies (Number and Letter)",
+  "Coding-Decoding Patterns",
+  "Matrix and Grid Patterns",
+  "Figure Series",
+  "Sequence Completion",
+  "Classification and Odd One Out",
+  "Visual Pattern Recognition"
+    ],
+    "Desc": "Pattern Recognition focuses on identifying logical sequences and relationships among numbers, letters, and figures to find missing or next elements in a series..."
+  },
+  {
+    "id": 2,
+    "topic": "Analytical Reasoning",
+    "icon": "🧠",
+    "subtopics": [
+"Seating Arrangement",
+    "Puzzles",
+    "Ranking and Ordering",
+    "Blood Relations (Analytical Type)",
+    "Direction and Distance Puzzles",
+    "Grouping and Selection",
+    "Conditional Reasoning",
+    "Cause and Effect",
+    "Statement and Conclusion",
+    "Statement and Assumption"
+    ],
+    "Desc": "Analytical Reasoning tests logical thinking and problem-solving ability through puzzles, seating arrangements, ranking, statements, and conditional reasoning..."
+  },{
+  "id": 3,
+  "topic": "Syllogism",
+  "icon": "⚖️",
+  "subtopics": [
+    "Introduction to Syllogism",
+    "Categorical Statements",
+    "Venn Diagram Approach",
+    "Two and Three Statement Syllogisms",
+    "Either-Or and Neither-Nor Cases",
+    "Possibility and Definitive Conclusions",
+    "Reverse Syllogism",
+    "Statement and Conclusion Type Questions",
+    "Complex and Mixed Syllogisms",
+    "Shortcut Techniques and Tricks"
+  ],
+  "Desc": "Syllogism involves drawing logical conclusions from given statements using reasoning methods like Venn diagrams and categorical analysis."
+},
+{
+  "id": 4,
+  "topic": "Blood Relations",
+  "icon": "👨‍👩‍👧‍👦",
+  "subtopics": [
+    "Introduction to Blood Relations",
+    "Direct and Indirect Relationships",
+    "Paternal and Maternal Relations",
+    "Coded Blood Relations",
+    "Mixed Blood Relations",
+    "Family Tree Representation",
+    "Puzzle-based Relations",
+    "Generation and Hierarchy Problems",
+    "Complex Relationship Chains",
+    "Shortcut Techniques and Logical Tricks"
+  ],
+  "Desc": "Blood Relations tests understanding of family relationships through direct, indirect, and coded problems using logic and diagrammatic representation."
+},
+{
+  "id": 5,
+  "topic": "Direction Sense",
+  "icon": "🧭",
+  "subtopics": [
+    "Basic Directions and Compass Points",
+    "Left and Right Turns",
+    "Distance and Displacement",
+    "Relative Direction Problems",
+    "Multiple Step Directions",
+    "Circular and Rectangular Paths",
+    "Map-based Direction Problems",
+    "Time and Speed in Direction Sense",
+    "Shortcut Techniques for Quick Solutions",
+    "Practice Problems and Applications"
+  ],
+  "Desc": "Direction Sense tests the ability to determine directions and navigate paths using compass points, turns, and distance calculations."
+}
+  
+]

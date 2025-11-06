@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .dp{
     height: 230px;
     width: 230px;

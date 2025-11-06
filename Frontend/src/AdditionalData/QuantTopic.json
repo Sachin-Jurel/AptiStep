@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "topic": "Arithmetic",
+    "icon": "➕",
+    "subtopics": [
+      "Number System",
+      "HCF and LCM",
+      "Simplification",
+      "Percentage",
+      "Profit and Loss",
+      "Discount",
+      "Simple Interest",
+      "Compound Interest",
+      "Ratio",
+      "Average",
+      "Mixtures",
+      "Alligation",
+      "Time and Work",
+      "Pipes and Cisterns",
+      "Time",
+      "Speed",
+      "Distance",
+      "Boats and Streams",
+      "Problems on Trains",
+      "Mensuration"
+    ],
+    "Desc": "Profit and Loss, Time and Work, Simple and Compound Interest..."
+  },
+  {
+    "id": 2,
+    "topic": "Algebra",
+    "icon": "📐",
+    "subtopics": [
+      "Basic Algebraic Operations",
+      "Linear Equations",
+      "Quadratic Equations",
+      "Inequalities",
+      "Exponents and Powers",
+      "Polynomials",
+      "Algebraic Identities",
+      "Progressions (AP & GP)",
+      "Ratio and Proportion",
+      "Simplification and Substitution"
+    ],
+    "Desc": "Basic Algebraic Operations, Linear Equations, Quadratic Equations..."
+  },
+  {
+    "id": 3,
+    "topic": "Geometry",
+    "icon": "📏",
+    "subtopics": [
+      "Lines and Angles",
+      "Triangles and Their Properties",
+      "Congruence and Similarity of Triangles",
+      "Quadrilaterals",
+      "Circles",
+      "Polygons",
+      "Mensuration (2D and 3D)",
+      "Coordinate Geometry",
+      "Heights and Distances",
+      "Geometry Theorems and Basics"
+    ],
+    "Desc": "Lines and Angles, Triangles and Their Properties, Congruence and Similarity of Triangles..."
+  },
+  {
+    "id": 4,
+    "topic": "Statistics",
+    "icon": "📊",
+    "subtopics": [
+      "Introduction to Statistics",
+      "Data Collection and Classification",
+      "Frequency Distribution",
+      "Measures of Central Tendency (Mean, Median, Mode)",
+      "Measures of Dispersion (Range, Variance, Standard Deviation)",
+      "Correlation",
+      "Regression",
+      "Probability Distributions",
+      "Sampling and Sampling Techniques",
+      "Charts and Graphical Representation"
+    ],
+    "Desc": "Introduction to Statistics, Data Collection and Classification,Frequency Distribution..."
+  },
+  {
+    "id": 5,
+    "topic": "Probability",
+    "icon": "🎲",
+    "subtopics": [
+      "Basic Concepts of Probability",
+      "Addition and Multiplication Theorems",
+      "Conditional Probability",
+      "Independent and Dependent Events",
+      "Mutually Exclusive Events",
+      "Bayes’ Theorem",
+      "Permutation and Combination in Probability",
+      "Expected Value",
+      "Random Variables",
+      "Real-life Applications of Probability"
+    ],
+    "Desc": "Basic Concepts of Probability, Bayes’ Theorem, Permutation and Combination..."
+  }
+]

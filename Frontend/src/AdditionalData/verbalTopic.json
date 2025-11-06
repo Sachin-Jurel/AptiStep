@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "Grammar",
+    "icon": "✍️",
+    "subtopics": [
+      "Parts of Speech",
+      "Tenses",
+      "Articles",
+      "Prepositions",
+      "Conjunctions",
+      "Voice (Active and Passive)",
+      "Speech (Direct and Indirect)",
+      "Subject-Verb Agreement",
+      "Phrases and Clauses",
+      "Error Detection and Correction"
+    ],
+    "Desc": "Grammar focuses on the structure and rules of the English language, covering topics like Parts of Speech, Tenses, Articles, and Error Correction."
+  },
+  {
+    "id": 2,
+    "topic": "Vocabulary",
+    "icon": "🗣️",
+    "subtopics": [
+      "Word Meanings",
+      "Homonyms and Homophones",
+      "One Word Substitution",
+      "Idioms and Phrases",
+      "Spelling Test",
+      "Word Formation",
+      "Commonly Confused Words",
+      "Root Words and Prefixes",
+      "Foreign Words and Phrases",
+      "Collocations"
+    ],
+    "Desc": "Vocabulary improves word knowledge through meanings, idioms, one-word substitutions, spellings, and commonly confused words."
+  },
+  {
+    "id": 3,
+    "topic": "Reading Comprehension",
+    "icon": "📖",
+    "subtopics": [
+      "Passage Reading",
+      "Inference Questions",
+      "Main Idea and Theme Identification",
+      "Tone and Style of the Passage",
+      "Vocabulary in Context",
+      "Fact and Opinion Differentiation",
+      "Logical Flow of Ideas",
+      "Critical Reasoning in Reading",
+      "Summarization Questions",
+      "Time Management Techniques"
+    ],
+    "Desc": "Reading Comprehension tests the ability to understand, interpret, and analyze written passages effectively."
+  },
+  {
+    "id": 4,
+    "topic": "Synonyms",
+    "icon": "🔁",
+    "subtopics": [
+      "Commonly Used Synonyms",
+      "Context-Based Synonyms",
+      "Synonyms in Sentences",
+      "Vocabulary Enrichment Exercises",
+      "Practice Word Lists",
+      "Sentence Completion with Synonyms",
+      "Advanced Synonym Practice",
+      "One Word Substitution Practice",
+      "Reading-Based Synonym Recognition",
+      "Mock Test Exercises"
+    ],
+    "Desc": "Synonyms improve vocabulary by learning words with similar meanings and using them appropriately in different contexts."
+  },
+  {
+    "id": 5,
+    "topic": "Antonyms",
+    "icon": "🔄",
+    "subtopics": [
+      "Commonly Used Antonyms",
+      "Context-Based Antonyms",
+      "Opposite Words Practice",
+      "Sentence-Based Antonym Exercises",
+      "Vocabulary Strengthening",
+      "Pairing Opposite Words",
+      "Antonym Tests and Quizzes",
+      "Word Usage in Context",
+      "Advanced Vocabulary Practice",
+      "Reading Comprehension with Antonym Focus"
+    ],
+    "Desc": "Antonyms focus on learning and identifying words with opposite meanings to strengthen vocabulary and comprehension."
+  }
+]

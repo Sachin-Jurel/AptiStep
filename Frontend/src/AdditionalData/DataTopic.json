@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "Charts",
+    "icon": "📊",
+    "subtopics": [
+      "Data Interpretation through Charts",
+      "Line Charts",
+      "Bar Charts",
+      "Pie Charts",
+      "Mixed Charts",
+      "Comparative Data Analysis",
+      "Trend Observation",
+      "Ratio and Percentage Analysis",
+      "Conversion of Data Forms",
+      "Practice Chart Questions"
+    ],
+    "Desc": "Charts involve analyzing visual data using line, bar, and pie formats to interpret trends, comparisons, and relationships."
+  },
+  {
+    "id": 2,
+    "topic": "Graphs",
+    "icon": "📈",
+    "subtopics": [
+      "Line Graphs",
+      "Bar Graphs",
+      "Cumulative Graphs",
+      "XY Axis Interpretation",
+      "Data Relationship Analysis",
+      "Slope and Trend Evaluation",
+      "Multiple Graph Comparison",
+      "Time-Based Graph Problems",
+      "Conversion between Graph Types",
+      "Real-life Graph Applications"
+    ],
+    "Desc": "Graphs represent numerical data visually to identify patterns, trends, and relationships for analytical interpretation."
+  },
+  {
+    "id": 3,
+    "topic": "Tables",
+    "icon": "📋",
+    "subtopics": [
+      "Tabular Data Interpretation",
+      "Row and Column Analysis",
+      "Percentage and Ratio Calculation",
+      "Missing Data Problems",
+      "Comparative Data Evaluation",
+      "Average and Total Calculation",
+      "Multi-table Analysis",
+      "Logical Data Inference",
+      "Mixed Table and Graph Questions",
+      "Practice Table Sets"
+    ],
+    "Desc": "Tables test the ability to read, compare, and analyze data presented in tabular form through calculations and logical inference."
+  },
+  {
+    "id": 4,
+    "topic": "Pie Charts",
+    "icon": "🟠",
+    "subtopics": [
+      "Introduction to Pie Charts",
+      "Percentage Distribution",
+      "Degree-based Data Conversion",
+      "Comparing Multiple Pie Charts",
+      "Data Interpretation from Pie Segments",
+      "Fraction and Ratio Conversion",
+      "Combined Pie Chart Problems",
+      "Mixed Graph Analysis with Pie Charts",
+      "Real-life Data Scenarios",
+      "Practice Questions and Tests"
+    ],
+    "Desc": "Pie Charts represent data as circular segments showing proportions and percentages, helping visualize part-to-whole relationships."
+  },
+  {
+    "id": 5,
+    "topic": "Bar Graphs",
+    "icon": "📉",
+    "subtopics": [
+      "Simple Bar Graphs",
+      "Double Bar Graphs",
+      "Stacked Bar Graphs",
+      "Percentage Bar Graphs",
+      "Data Comparison and Analysis",
+      "Trend and Variation Study",
+      "Mixed Graphs with Tables",
+      "Bar Graph Conversion",
+      "Real-world Data Interpretation",
+      "Practice Bar Graph Sets"
+    ],
+    "Desc": "Bar Graphs visually compare data using bars of varying lengths to represent quantities, making it easier to analyze and compare information."
+  }
+]

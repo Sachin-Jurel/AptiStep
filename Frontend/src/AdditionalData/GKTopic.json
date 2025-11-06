@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "Current Affairs",
+    "icon": "📰",
+    "subtopics": [
+      "National Events",
+      "International Events",
+      "Awards and Honours",
+      "Government Schemes",
+      "Economic Updates",
+      "Important Appointments",
+      "Science and Technology Developments",
+      "Sports News",
+      "Summits and Conferences",
+      "Monthly Current Affairs Review"
+    ],
+    "Desc": "Current Affairs covers the latest national and international events, government policies, awards, and important updates relevant for competitive exams."
+  },
+  {
+    "id": 2,
+    "topic": "History",
+    "icon": "🏛️",
+    "subtopics": [
+      "Ancient Indian History",
+      "Medieval Indian History",
+      "Modern Indian History",
+      "World History Overview",
+      "Freedom Movement",
+      "Important Dynasties and Rulers",
+      "Cultural and Social Developments",
+      "Historical Monuments and Architecture",
+      "Reform Movements",
+      "Important Historical Events and Dates"
+    ],
+    "Desc": "History focuses on India's ancient, medieval, and modern periods, covering major events, movements, rulers, and global historical developments."
+  },
+  {
+    "id": 3,
+    "topic": "Geography",
+    "icon": "🌍",
+    "subtopics": [
+      "Physical Geography",
+      "Indian Geography",
+      "World Geography",
+      "Climate and Weather",
+      "Rivers and Water Bodies",
+      "Mountains and Plateaus",
+      "Soils and Vegetation",
+      "Natural Resources",
+      "Population and Demographics",
+      "Map Reading and Location Identification"
+    ],
+    "Desc": "Geography covers physical, Indian, and world geography including climate, natural resources, and important physical features of the Earth."
+  },
+  {
+    "id": 4,
+    "topic": "Science",
+    "icon": "🔬",
+    "subtopics": [
+      "Physics Basics",
+      "Chemistry Fundamentals",
+      "Biology Essentials",
+      "Everyday Science",
+      "Scientific Instruments",
+      "Discoveries and Inventions",
+      "Space Science",
+      "Environmental Science",
+      "Human Body Systems",
+      "Recent Scientific Developments"
+    ],
+    "Desc": "Science includes Physics, Chemistry, and Biology concepts along with everyday applications, discoveries, and recent technological advancements."
+  },
+  {
+    "id": 5,
+    "topic": "Sports",
+    "icon": "🏅",
+    "subtopics": [
+      "National Sports Events",
+      "International Sports Tournaments",
+      "Famous Players and Records",
+      "Olympics and World Cups",
+      "Sports Terminology",
+      "Major Sports Awards",
+      "Cricket and Football Highlights",
+      "Indian Sports Personalities",
+      "Recent Sports News",
+      "Games and Rules Overview"
+    ],
+    "Desc": "Sports covers major national and international events, famous players, tournaments, records, and recent achievements in various games."
+  }
+]

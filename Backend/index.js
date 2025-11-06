@@ -152,11 +152,13 @@ app.put("/user/edit", upload.single("avatar"), async (req, res) => {
   }
 });
 
-app.post("/user/test", upload.single("avatar"), async (req, res) => {
+app.post("/user/test",  async (req, res) => {
   try {
     const token = req.cookies.token;
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
+    if (!token) {
+      return res.status(401).json({ error: "JWT must be provided" });
+    }
     const updatedUser = await userModel
       .findById(decoded.id)
       .select("-password");
@@ -168,7 +170,7 @@ app.post("/user/test", upload.single("avatar"), async (req, res) => {
   }
 });
 
-app.post("/user/test/start", upload.single("avatar"), async (req, res) => {
+app.post("/user/test/start", async (req, res) => {
   try {
     const token = req.cookies.token;
     const decoded = jwt.verify(token, process.env.JWT_SECRET);

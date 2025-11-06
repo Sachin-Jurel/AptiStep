@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "topic": "Hardware",
+    "icon": "💻",
+    "subtopics": [
+      "Computer Components",
+      "Input and Output Devices",
+      "Storage Devices",
+      "Memory Types (RAM, ROM)",
+      "Motherboard and CPU",
+      "Peripheral Devices",
+      "Ports and Connectors",
+      "Computer Architecture Basics",
+      "Power Supply Units",
+      "Troubleshooting Hardware Issues"
+    ],
+    "Desc": "Hardware covers the physical components of a computer system including CPU, memory, storage, and peripheral devices essential for operation."
+  },
+  {
+    "id": 2,
+    "topic": "Software",
+    "icon": "🧩",
+    "subtopics": [
+      "System Software",
+      "Application Software",
+      "Operating Systems",
+      "Utility Programs",
+      "Software Development Lifecycle",
+      "Open Source vs Proprietary Software",
+      "Cloud Software and Services",
+      "Mobile Applications",
+      "Software Installation and Updates",
+      "Common Software Errors and Fixes"
+    ],
+    "Desc": "Software includes system and application programs, operating systems, and tools that enable computers to perform tasks efficiently."
+  },
+  {
+    "id": 3,
+    "topic": "Networking",
+    "icon": "🌐",
+    "subtopics": [
+      "Computer Networks Basics",
+      "Network Topologies",
+      "IP Addressing and Subnetting",
+      "LAN, WAN, and MAN",
+      "Network Devices (Router, Switch, Hub)",
+      "Internet and Intranet",
+      "Protocols (TCP/IP, HTTP, FTP)",
+      "Wireless Networking",
+      "Cybersecurity Fundamentals",
+      "Cloud and Internet Technologies"
+    ],
+    "Desc": "Networking deals with communication between computers, covering network types, devices, protocols, and security concepts."
+  },
+  {
+    "id": 4,
+    "topic": "Programming",
+    "icon": "💡",
+    "subtopics": [
+      "Introduction to Programming Languages",
+      "C, C++, Java, and Python Basics",
+      "Data Types and Variables",
+      "Control Structures and Loops",
+      "Functions and Arrays",
+      "Object-Oriented Programming Concepts",
+      "Debugging and Error Handling",
+      "Logic Building and Algorithms",
+      "Flowcharts and Pseudocode",
+      "Recent Trends in Programming"
+    ],
+    "Desc": "Programming introduces coding fundamentals, logic building, and object-oriented concepts using languages like C, Java, and Python."
+  },
+  {
+    "id": 5,
+    "topic": "Database",
+    "icon": "🗄️",
+    "subtopics": [
+      "Introduction to Databases",
+      "DBMS and RDBMS Concepts",
+      "SQL Basics (Select, Insert, Update, Delete)",
+      "Database Models",
+      "Keys and Relationships",
+      "Normalization and Denormalization",
+      "Transactions and ACID Properties",
+      "Database Security",
+      "Backup and Recovery",
+      "Popular Database Systems (MySQL, Oracle)"
+    ],
+    "Desc": "Database covers DBMS concepts, SQL commands, data modeling, normalization, and database management essentials for structured data storage."
+  }
+]
