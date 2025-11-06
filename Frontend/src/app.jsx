@@ -15,6 +15,8 @@ import DI from "./Pages/Data Interpretation/DI.jsx";
 import GK from "./Pages/GK/GK.jsx";
 import CA from "./Pages/Computer Awareness/CA.jsx";
 import MainTest from "./Pages/TestPage.jsx";
+import QuantTest from "./Pages/Quantitative/QuantTest.jsx";
+import LogicalTest from "./Pages/Logical/logicalTest.jsx";
 
 const App = () => {
   return (
@@ -36,6 +38,8 @@ const App = () => {
             <Route path="/test/dataInterpretation" element={<DI />} />
             <Route path="/test/GeneralKnowledge" element={<GK />} />
             <Route path="/test/computerAwareness" element={<CA />} />
+            <Route path="/test/Quantitative/:id" element={<QuantTest />} />
+            {/* <Route path="/test/logicalReasoning/:id" element={<LogicalTest />} /> */}
           </Routes>
         </div>
         <Footer />

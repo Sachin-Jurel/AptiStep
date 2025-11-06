@@ -11,6 +11,8 @@ import upload from "./config/multerConfig.js";
 import { GoogleGenAI } from "@google/genai";
 
 import prompt from "./Prompts/TestPrompt.js";
+import Quantprompt from "./Prompts/QuantPrompt.js";
+import logicalprompt from "./Prompts/logicalPrompt.js";
 
 app.use(
   cors({
@@ -26,6 +28,32 @@ app.use("/images", express.static("public/images"));
 app.use("/uploads", express.static("uploads"));
 
 await mongoose.connect("mongodb://127.0.0.1:27017/AptiStep");
+
+const funct = async (prompt, req)=> {
+  const token = req.cookies.token;
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const updatedUser = await userModel.findById(decoded.id).select("-password");
+
+    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
+    const response = await ai.models.generateContent({
+      model: "gemini-2.5-pro",
+      contents: [{ role: "user", parts: [{ text: Quantprompt }] }],
+    });
+
+    const text = response?.candidates?.[0]?.content?.parts?.[0]?.text || "";
+
+    const cleanText = text.replace(/```json|```/g, "").trim();
+
+    let questions = [];
+    if (cleanText) {
+      try {
+        questions = JSON.parse(cleanText);
+      } catch {
+        console.error("Invalid JSON from Gemini:", cleanText);
+      }
+    }
+    return {questions, updatedUser};
+}
 
 app.get("/", (req, res) => {
   console.log("home page");
@@ -172,35 +200,33 @@ app.post("/user/test",  async (req, res) => {
 
 app.post("/user/test/start", async (req, res) => {
   try {
-    const token = req.cookies.token;
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    const updatedUser = await userModel.findById(decoded.id).select("-password");
-
-    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
-    const response = await ai.models.generateContent({
-      model: "gemini-2.5-pro",
-      contents: [{ role: "user", parts: [{ text: prompt }] }],
-    });
-
-    const text = response?.candidates?.[0]?.content?.parts?.[0]?.text || "";
-
-    const cleanText = text.replace(/```json|```/g, "").trim();
-
-    let questions = [];
-    if (cleanText) {
-      try {
-        questions = JSON.parse(cleanText);
-      } catch {
-        console.error("Invalid JSON from Gemini:", cleanText);
-      }
-    }
-
+    let {questions, updatedUser} = await funct(prompt,req);
     res.json({ updatedUser, questions });
   } catch (err) {
     console.error("Upload error:", err);
     res.status(500).json({ error: err.message });
   }
 });
+
+app.post("/test/quant", async (req, res) => {
+  try {
+    let {questions, updatedUser} = await funct(Quantprompt,req);
+    res.json({ updatedUser, questions });
+  } catch (err) {
+    console.error("Upload error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
+// app.post("/test/logical", async (req, res) => {
+//   try {
+//     let {questions, updatedUser} = await funct(logicalprompt);
+//     res.json({ updatedUser, questions });
+//   } catch (err) {
+//     console.error("Upload error:", err);
+//     res.status(500).json({ error: err.message });
+//   }
+// });
 
 
 app.listen("8080", () => {

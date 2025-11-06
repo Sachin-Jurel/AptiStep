@@ -6,7 +6,7 @@ import SubtopicData from "../../AdditionalData/QuantTopic.json";
 const Quant = () => {
   
   return(
-    <Test topic={TestTopics[0]} Subtopic={SubtopicData}/>
+    <Test topic={TestTopics[0]} Subtopic={SubtopicData} path="/test/Quantitative"/>
   );
 };
 

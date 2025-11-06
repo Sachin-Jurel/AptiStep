@@ -36,7 +36,7 @@ const MainTest = () => {
 }, [user, navigate]);
 
   return (
-    <Test topic={data[0]} Subtopic={TestTopics}/>
+    <Test topic={data[0]} Subtopic={TestTopics} path="/test"/>
   );
 };
 

@@ -6,7 +6,7 @@ import SubtopicData from "../../AdditionalData/logicalTopic.json";
 const Logical = () => {
   
   return(
-    <Test topic={TestTopics[1]} Subtopic={SubtopicData}/>
+    <Test topic={TestTopics[1]} Subtopic={SubtopicData} path="/test/logicalReasoning"/>
   );
 };
 

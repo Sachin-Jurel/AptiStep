@@ -1,11 +1,39 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useContext } from "react";
 import { useState } from "react";
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FileText, Clock, Zap, BookOpen, ClipboardList } from "lucide-react";
+import { UserContext } from "../context/userContext";
+import axios from "axios";
 
 const Test = (props) => {
   const [activeTab, setActiveTab] = useState("full");
   const navigate = useNavigate();
+  const { user, setUser } = useContext(UserContext);
+  console.log(user)
+
+  useEffect(() => {
+    const fetchTest = async () => {
+      try {
+        const res = await axios.post(
+          "http://localhost:8080/user/test",
+          {},
+          { withCredentials: true }
+        );
+        setUser(res.data.updatedUser);
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Error fetching test");
+      }
+    };
+
+    fetchTest();
+  }, [setUser]);
+
+  useEffect(() => {
+    if (user === null) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
 
   return (
     <div className="min-h-screen bg-gray-100 py-8">
@@ -133,7 +161,10 @@ const Test = (props) => {
                 Make sure you have a stable internet connection.
               </p>
             </div>
-            <button className="h-12 w-50 bg-blue-700 text-white font-semibold rounded-md" onClick={()=> navigate("/test/123")}>
+            <button
+              className="h-12 w-50 bg-blue-700 text-white font-semibold rounded-md"
+              onClick={() => navigate(`${props.path}/${user._id}`)}
+            >
               Start Test
             </button>
           </div>
@@ -151,26 +182,28 @@ const Test = (props) => {
 
           <div className="flex flex-wrap gap-4">
             {props.Subtopic.map((sub) => (
-            <div className="w-90 bg-white mt-5 rounded-md p-5 shadow-2xs border-2 border-gray-200 flex gap-4 cursor-pointer hover:border-blue-300 hover:bg-gray-200 transition">
-              <div className="h-10 w-20 bg-emerald-50 rounded-md flex items-center justify-center">
-                {sub.icon}
-              </div>
-              <div>
-                <div className="font-bold text-2xl text-gray-600">
-                  {sub.topic}
+              <div className="w-90 bg-white mt-5 rounded-md p-5 shadow-2xs border-2 border-gray-200 flex gap-4 cursor-pointer hover:border-blue-300 hover:bg-gray-200 transition">
+                <div className="h-10 w-20 bg-emerald-50 rounded-md flex items-center justify-center">
+                  {sub.icon}
                 </div>
-                <div className="text-md text-gray-500 font-semibold">
-                  {sub.Desc}
+                <div>
+                  <div className="font-bold text-2xl text-gray-600">
+                    {sub.topic}
+                  </div>
+                  <div className="text-md text-gray-500 font-semibold">
+                    {sub.Desc}
+                  </div>
+                  <button
+                    className="h-10 w-25 bg-blue-700 font-semibold rounded-md mt-3 text-white text-xl hover:bg-emerald-300 hover:text-gray-600 "
+                    onClick={() => {
+                      navigate(`${sub.go}`);
+                    }}
+                  >
+                    Let's go
+                  </button>
                 </div>
-                <button className="h-10 w-25 bg-blue-700 font-semibold rounded-md mt-3 text-white text-xl hover:bg-emerald-300 hover:text-gray-600 " onClick={()=>{
-                  navigate(`${sub.go}`)
-                }} >
-                  Let's go
-                </button>
               </div>
-            </div>
-
-          ))}
+            ))}
           </div>
         </div>
       )}
