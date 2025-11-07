@@ -241,8 +241,6 @@ const EditProfile = () => {
       />
     </div>
   );
-  // ...existing code...
 };
 
 export default EditProfile;
-// ...existing code...

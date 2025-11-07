@@ -12,7 +12,6 @@ import { GoogleGenAI } from "@google/genai";
 
 import prompt from "./Prompts/TestPrompt.js";
 import Quantprompt from "./Prompts/QuantPrompt.js";
-import logicalprompt from "./Prompts/logicalPrompt.js";
 
 app.use(
   cors({
@@ -27,7 +26,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/images", express.static("public/images"));
 app.use("/uploads", express.static("uploads"));
 
-await mongoose.connect("mongodb://127.0.0.1:27017/AptiStep");
+
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverSelectionTimeoutMS: 10000, // 10s timeout
+})
+.then(() => console.log("✅ MongoDB Atlas Connected"))
+.catch(err => {
+  console.error("❌ MongoDB Connection Error:", err.message);
+  process.exit(1);
+});
+
 
 const funct = async (prompt, req)=> {
   const token = req.cookies.token;

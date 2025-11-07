@@ -16,7 +16,7 @@ import GK from "./Pages/GK/GK.jsx";
 import CA from "./Pages/Computer Awareness/CA.jsx";
 import MainTest from "./Pages/TestPage.jsx";
 import QuantTest from "./Pages/Quantitative/QuantTest.jsx";
-import LogicalTest from "./Pages/Logical/logicalTest.jsx";
+import Features from "./Pages/Features.jsx";
 
 const App = () => {
   return (
@@ -39,7 +39,7 @@ const App = () => {
             <Route path="/test/GeneralKnowledge" element={<GK />} />
             <Route path="/test/computerAwareness" element={<CA />} />
             <Route path="/test/Quantitative/:id" element={<QuantTest />} />
-            {/* <Route path="/test/logicalReasoning/:id" element={<LogicalTest />} /> */}
+            <Route path="/features" element={<Features />} />
           </Routes>
         </div>
         <Footer />

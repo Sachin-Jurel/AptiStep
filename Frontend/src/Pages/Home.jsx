@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const MainSection = () => {
+  const navigate = useNavigate();
   return (
     <>
-      <section className="pt-24 pb-16 bg-gradient-to-b from-white to-[#3BA97F]/20">
+      <section className="pt-24 animate-fade-in pb-16 bg-gradient-to-b from-white to-[#3BA97F]/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -21,7 +22,7 @@ const MainSection = () => {
                 <Link to="/login" className="bg-[#3BA97F] text-1xl  hover:bg-[#3BA97F]/80 text-white px-6 py-3 rounded-lg font-semibold shadow-md transition-colors duration-200">
                   Start Practicing
                 </Link>
-                <button className="bg-white hover:bg-gray-50 text-[#0A0F48] border border-[#3BA97F] px-6 py-3 rounded-lg font-semibold shadow-sm transition-colors duration-200">
+                <button className="bg-white hover:bg-gray-50 text-[#0A0F48] border border-[#3BA97F] px-6 py-3 rounded-lg font-semibold shadow-sm transition-colors duration-200" onClick={() => {navigate("/features")}}>
                   View Features
                 </button>
               </div>

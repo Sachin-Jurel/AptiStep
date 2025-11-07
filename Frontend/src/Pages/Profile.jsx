@@ -62,7 +62,7 @@ const Profile = () => {
               <div className="lg:w-1/3 bg-gradient-to-br from-blue-950 via-teal-600 to-emerald-500 px-8 flex flex-col items-center justify-center relative">
                 <div className="relative z-10 text-center">
                   {/* Profile Image */}
-                  <div className="relative mb-6">
+                  <div className="relative animate-fade-in mb-6">
                     <img
                       src={user?.profilePic || ProfileImage}
                     alt="Profile"

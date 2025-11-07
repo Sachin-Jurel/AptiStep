@@ -17,9 +17,9 @@ const TestComponent = ({ questions = [], onSubmit }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-      <div className="mx-auto max-w-3xl px-4 py-8">
-        <div className="mb-6 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-200">
-          <div className="flex items-center justify-between px-6 py-5">
+      <div className="mx-auto max-w-3xl px-3 md:px-4 py-4 md:py-8">
+        <div className="mb-4 md:mb-6 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-gray-200">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between px-4 md:px-6 py-4 md:py-5 gap-4">
             <div className="flex items-start gap-3">
               <div className="mt-0.5 rounded-xl bg-blue-600/10 p-2 text-blue-700 ring-1 ring-inset ring-blue-200">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
@@ -27,29 +27,29 @@ const TestComponent = ({ questions = [], onSubmit }) => {
                 </svg>
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">Attempting Test</h1>
-                <p className="mt-1 text-sm text-gray-500">Answer the questions below and submit when you're done.</p>
+                <h1 className="text-lg md:text-xl font-bold text-gray-900">Attempting Test</h1>
+                <p className="mt-1 text-xs md:text-sm text-gray-500">Answer the questions below and submit when you're done.</p>
               </div>
             </div>
-            <div className="flex items-center gap-3">
-              <span className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-200">
+            <div className="flex items-center gap-2 md:gap-3 w-full md:w-auto">
+              <span className="inline-flex items-center rounded-full bg-blue-50 px-2 md:px-3 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-200">
                 {questions.length} Questions
               </span>
-              <span className="inline-flex items-center rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-200">
+              <span className="inline-flex items-center rounded-full bg-emerald-50 px-2 md:px-3 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-200">
                 {Object.keys(answers).length} Selected
               </span>
             </div>
           </div>
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4 md:space-y-6">
           {questions.map((q, idx) => (
-            <div key={q.id} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-gray-200 transition hover:shadow-md">
-              <div className="mb-4 flex items-start gap-3">
-                <div className="mt-1 select-none rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-3 py-1 text-xs font-semibold text-white shadow-sm">
+            <div key={q.id} className="rounded-2xl bg-white p-4 md:p-6 shadow-sm ring-1 ring-gray-200 transition hover:shadow-md">
+              <div className="mb-3 md:mb-4 flex items-start gap-2 md:gap-3">
+                <div className="mt-1 select-none rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-2 md:px-3 py-1 text-xs font-semibold text-white shadow-sm">
                   Q{idx + 1}
                 </div>
-                <h2 className="text-base font-semibold leading-6 text-gray-900">{q.question}</h2>
+                <h2 className="text-sm md:text-base font-semibold leading-5 md:leading-6 text-gray-900">{q.question}</h2>
               </div>
               <fieldset className="space-y-2">
                 {q.options.map((opt) => {
@@ -57,7 +57,7 @@ const TestComponent = ({ questions = [], onSubmit }) => {
                   return (
                     <label
                       key={opt}
-                      className={`${isSelected ? "border-blue-300 bg-blue-50 ring-2 ring-blue-200" : "border-gray-200 bg-white"} group flex cursor-pointer items-center gap-3 rounded-xl border px-4 py-3 transition hover:bg-gray-50`}
+                      className={`${isSelected ? "border-blue-300 bg-blue-50 ring-2 ring-blue-200" : "border-gray-200 bg-white"} group flex cursor-pointer items-center gap-2 md:gap-3 rounded-xl border px-3 md:px-4 py-2.5 md:py-3 transition hover:bg-gray-50`}
                     >
                       <input
                         type="radio"
@@ -65,9 +65,9 @@ const TestComponent = ({ questions = [], onSubmit }) => {
                         value={opt}
                         checked={isSelected}
                         onChange={() => handleSelect(q.id, q.answer, opt)}
-                        className="h-4 w-4 cursor-pointer accent-blue-600"
+                        className="h-4 w-4 cursor-pointer accent-blue-600 flex-shrink-0"
                       />
-                      <span className={`${isSelected ? "text-blue-900" : "text-gray-800"} text-sm`}>{opt}</span>
+                      <span className={`${isSelected ? "text-blue-900" : "text-gray-800"} text-xs md:text-sm break-words`}>{opt}</span>
                     </label>
                   );
                 })}
@@ -78,21 +78,21 @@ const TestComponent = ({ questions = [], onSubmit }) => {
       </div>
 
       <div className="sticky bottom-0 z-10 w-full border-t border-gray-200 bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-4">
-          <div className="flex items-center gap-4 text-sm text-gray-600">
+        <div className="mx-auto flex flex-col md:flex-row max-w-3xl items-center justify-between gap-3 md:gap-4 px-3 md:px-4 py-3 md:py-4">
+          <div className="flex items-center gap-2 md:gap-4 text-xs md:text-sm text-gray-600 w-full md:w-auto">
             <span className="font-medium text-gray-900">Progress:</span>
-            <div className="relative h-2 w-40 rounded-full bg-slate-200">
+            <div className="relative h-2 w-24 md:w-40 rounded-full bg-slate-200 flex-1 md:flex-none">
               <div
                 className="absolute left-0 top-0 h-full rounded-full bg-blue-600 transition-all"
                 style={{ width: `${(Object.keys(answers).length / Math.max(questions.length, 1)) * 100}%` }}
               ></div>
             </div>
-            <span className="tabular-nums">{Object.keys(answers).length}/{questions.length}</span>
+            <span className="tabular-nums whitespace-nowrap">{Object.keys(answers).length}/{questions.length}</span>
           </div>
 
           <button
             onClick={handleSubmit}
-            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:from-blue-700 hover:to-indigo-700"
+            className="inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 md:px-5 py-2 md:py-2.5 text-xs md:text-sm font-semibold text-white shadow-sm transition hover:from-blue-700 hover:to-indigo-700 w-full md:w-auto"
           >
             Submit Test
           </button>
