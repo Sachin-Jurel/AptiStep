@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { FileText, Clock, Zap, BookOpen, ClipboardList } from "lucide-react";
 import { UserContext } from "../context/userContext";
 import axios from "axios";
-import { use } from "react";
 
 const Test = (props) => {
   const [activeTab, setActiveTab] = useState("full");

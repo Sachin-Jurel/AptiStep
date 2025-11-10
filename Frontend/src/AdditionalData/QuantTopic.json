@@ -3,6 +3,16 @@
     "id": 1,
     "topic": "Arithmetic",
     "icon": "➕",
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
     "subtopics": [
       "Number System",
       "HCF and LCM",
@@ -25,12 +35,14 @@
       "Problems on Trains",
       "Mensuration"
     ],
-    "Desc": "Profit and Loss, Time and Work, Simple and Compound Interest..."
+    
+    "Desc": "The study of numbers and basic operations used to solve problems involving calculations, ratios, percentages, and everyday math.",
+    "go": "/test/Quantitative/arithmetic"
   },
   {
     "id": 2,
     "topic": "Algebra",
-    "icon": "📐",
+    "icon": "🧮",
     "subtopics": [
       "Basic Algebraic Operations",
       "Linear Equations",
@@ -43,12 +55,34 @@
       "Ratio and Proportion",
       "Simplification and Substitution"
     ],
-    "Desc": "Basic Algebraic Operations, Linear Equations, Quadratic Equations..."
+    
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "Desc": "Algebra focuses on solving mathematical problems using symbols, variables, and equations.",
+    "go": "/test/Quantitative/algebra"
   },
   {
     "id": 3,
     "topic": "Geometry",
-    "icon": "📏",
+    "icon": "📏", 
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
     "subtopics": [
       "Lines and Angles",
       "Triangles and Their Properties",
@@ -61,7 +95,8 @@
       "Heights and Distances",
       "Geometry Theorems and Basics"
     ],
-    "Desc": "Lines and Angles, Triangles and Their Properties, Congruence and Similarity of Triangles..."
+    "Desc": "Geometry deals with the properties, shapes, sizes, and relative positions of figures and spaces.",
+    "go": "/test/Quantitative/geometry"
   },
   {
     "id": 4,
@@ -79,12 +114,35 @@
       "Sampling and Sampling Techniques",
       "Charts and Graphical Representation"
     ],
-    "Desc": "Introduction to Statistics, Data Collection and Classification,Frequency Distribution..."
+    
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "Desc": "Statistics involves collecting, organizing, analyzing, and interpreting numerical data.",
+    "go": "/test/Quantitative/statistics"
   },
   {
     "id": 5,
     "topic": "Probability",
     "icon": "🎲",
+    
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
     "subtopics": [
       "Basic Concepts of Probability",
       "Addition and Multiplication Theorems",
@@ -97,6 +155,7 @@
       "Random Variables",
       "Real-life Applications of Probability"
     ],
-    "Desc": "Basic Concepts of Probability, Bayes’ Theorem, Permutation and Combination..."
+    "Desc": "Probability measures the likelihood of events occurring. It includes basic probability rules, independent and dependent events, conditional probability, and combinations.",
+    "go": "/test/Quantitative/probability"
   }
 ]

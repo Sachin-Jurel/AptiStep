@@ -14,8 +14,19 @@
   "Sequence Completion",
   "Classification and Odd One Out",
   "Visual Pattern Recognition"
+    ],   
+    "questions": 20,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
     ],
-    "Desc": "Pattern Recognition focuses on identifying logical sequences and relationships among numbers, letters, and figures to find missing or next elements in a series..."
+    "go": "/test/logicalReasoning/pattern",
+    "Desc": "Pattern Recognition focuses on identifying logical or numerical patterns in a given sequence, figure, or arrangement."
   },
   {
     "id": 2,
@@ -33,7 +44,18 @@
     "Statement and Conclusion",
     "Statement and Assumption"
     ],
-    "Desc": "Analytical Reasoning tests logical thinking and problem-solving ability through puzzles, seating arrangements, ranking, statements, and conditional reasoning..."
+    "Desc": "Analytical Reasoning tests your ability to analyze information, draw logical conclusions, and solve problems systematically.",
+    "questions": 20,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/logicalReasoning/analytical"
   },{
   "id": 3,
   "topic": "Syllogism",
@@ -50,7 +72,19 @@
     "Complex and Mixed Syllogisms",
     "Shortcut Techniques and Tricks"
   ],
-  "Desc": "Syllogism involves drawing logical conclusions from given statements using reasoning methods like Venn diagrams and categorical analysis."
+  "Desc": "Syllogism involves drawing logical conclusions from given statements using reasoning methods like Venn diagrams and categorical analysis.",
+  
+    "questions": 20,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/logicalReasoning/syllogism"
 },
 {
   "id": 4,
@@ -68,7 +102,18 @@
     "Complex Relationship Chains",
     "Shortcut Techniques and Logical Tricks"
   ],
-  "Desc": "Blood Relations tests understanding of family relationships through direct, indirect, and coded problems using logic and diagrammatic representation."
+  "Desc": "Blood Relations tests understanding of family relationships through direct, indirect, and coded problems using logic and diagrammatic representation.",
+    "questions": 20,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/logicalReasoning/bloodRelations"
 },
 {
   "id": 5,
@@ -86,7 +131,18 @@
     "Shortcut Techniques for Quick Solutions",
     "Practice Problems and Applications"
   ],
-  "Desc": "Direction Sense tests the ability to determine directions and navigate paths using compass points, turns, and distance calculations."
+  "Desc": "Direction Sense tests the ability to determine directions and navigate paths using compass points, turns, and distance calculations.",
+    "questions": 20,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/logicalReasoning/directionSense"
 }
   
 ]

@@ -15,7 +15,18 @@
       "Summits and Conferences",
       "Monthly Current Affairs Review"
     ],
-    "Desc": "Current Affairs covers the latest national and international events, government policies, awards, and important updates relevant for competitive exams."
+    "Desc": "Current Affairs covers the latest national and international events, government policies, awards, and important updates relevant for competitive exams.",
+    "questions": 20,
+    "duration": "30 minutes",
+    "difficulty": "Easy",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/GeneralKnowledge/currentAffairs"
   },
   {
     "id": 2,
@@ -33,7 +44,18 @@
       "Reform Movements",
       "Important Historical Events and Dates"
     ],
-    "Desc": "History focuses on India's ancient, medieval, and modern periods, covering major events, movements, rulers, and global historical developments."
+    "Desc": "History focuses on India's ancient, medieval, and modern periods, covering major events, movements, rulers, and global historical developments.",
+    "questions": 20,
+    "duration": "30 minutes",
+    "difficulty": "Easy",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/GeneralKnowledge/history"
   },
   {
     "id": 3,
@@ -51,7 +73,18 @@
       "Population and Demographics",
       "Map Reading and Location Identification"
     ],
-    "Desc": "Geography covers physical, Indian, and world geography including climate, natural resources, and important physical features of the Earth."
+    "Desc": "Geography covers physical, Indian, and world geography including climate, natural resources, and important physical features of the Earth.",
+    "questions": 20,
+    "duration": "30 minutes",
+    "difficulty": "Easy",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/GeneralKnowledge/geography"
   },
   {
     "id": 4,
@@ -69,7 +102,18 @@
       "Human Body Systems",
       "Recent Scientific Developments"
     ],
-    "Desc": "Science includes Physics, Chemistry, and Biology concepts along with everyday applications, discoveries, and recent technological advancements."
+    "Desc": "Science includes Physics, Chemistry, and Biology concepts along with everyday applications, discoveries, and recent technological advancements.",
+    "questions": 20,
+    "duration": "30 minutes",
+    "difficulty": "Easy",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/GeneralKnowledge/science"
   },
   {
     "id": 5,
@@ -87,6 +131,17 @@
       "Recent Sports News",
       "Games and Rules Overview"
     ],
-    "Desc": "Sports covers major national and international events, famous players, tournaments, records, and recent achievements in various games."
+    "Desc": "Sports covers major national and international events, famous players, tournaments, records, and recent achievements in various games.",
+    "questions": 20,
+    "duration": "30 minutes",
+    "difficulty": "Easy",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/GeneralKnowledge/sports"
   }
 ]

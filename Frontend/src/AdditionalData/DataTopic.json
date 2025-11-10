@@ -15,7 +15,18 @@
       "Conversion of Data Forms",
       "Practice Chart Questions"
     ],
-    "Desc": "Charts involve analyzing visual data using line, bar, and pie formats to interpret trends, comparisons, and relationships."
+    "Desc": "Charts involve analyzing visual data using line, bar, and pie formats to interpret trends, comparisons, and relationships.",
+    "questions": 15,
+    "duration": "25 minutes",
+    "difficulty": "Hard",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/dataInterpretation/charts"
   },
   {
     "id": 2,
@@ -33,7 +44,18 @@
       "Conversion between Graph Types",
       "Real-life Graph Applications"
     ],
-    "Desc": "Graphs represent numerical data visually to identify patterns, trends, and relationships for analytical interpretation."
+    "Desc": "Graphs represent numerical data visually to identify patterns, trends, and relationships for analytical interpretation.",
+    "questions": 15,
+    "duration": "25 minutes",
+    "difficulty": "Hard",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/dataInterpretation/graphs"
   },
   {
     "id": 3,
@@ -51,7 +73,18 @@
       "Mixed Table and Graph Questions",
       "Practice Table Sets"
     ],
-    "Desc": "Tables test the ability to read, compare, and analyze data presented in tabular form through calculations and logical inference."
+    "Desc": "Tables test the ability to read, compare, and analyze data presented in tabular form through calculations and logical inference.",
+    "questions": 15,
+    "duration": "25 minutes",
+    "difficulty": "Hard",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/dataInterpretation/tables"
   },
   {
     "id": 4,
@@ -69,7 +102,18 @@
       "Real-life Data Scenarios",
       "Practice Questions and Tests"
     ],
-    "Desc": "Pie Charts represent data as circular segments showing proportions and percentages, helping visualize part-to-whole relationships."
+    "Desc": "Pie Charts represent data as circular segments showing proportions and percentages, helping visualize part-to-whole relationships.",
+    "questions": 15,
+    "duration": "25 minutes",
+    "difficulty": "Hard",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/dataInterpretation/pieCharts"
   },
   {
     "id": 5,
@@ -87,6 +131,17 @@
       "Real-world Data Interpretation",
       "Practice Bar Graph Sets"
     ],
-    "Desc": "Bar Graphs visually compare data using bars of varying lengths to represent quantities, making it easier to analyze and compare information."
+    "Desc": "Bar Graphs visually compare data using bars of varying lengths to represent quantities, making it easier to analyze and compare information.",
+    "questions": 15,
+    "duration": "25 minutes",
+    "difficulty": "Hard",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/dataInterpretation/barGraphs"
   }
 ]
