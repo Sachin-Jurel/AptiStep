@@ -1,13 +1,10 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Sachin-Jurel/AptiStep/main/Logo.png" alt="AptiStep Logo" width="120" height="120" />
+  <!-- SVG title image ensures consistent colored text on GitHub -->
+  <img src="./title.svg" alt="AptiStep Title" width="420" height="92" />
 
-  <h1 style="font-size:28px; font-weight:700; margin:8px 0;">
-    <span style="color:#0D0E48">Apti</span><span style="color:#3CAA81">Step</span>
-  </h1>
+  <p style="margin:8px 0; font-weight:600">Master Aptitude with Confidence 🚀</p>
 
-  <p style="margin:4px 0; font-weight:600">**Master Aptitude with Confidence** 🚀</p>
-
-An interactive aptitude learning and test preparation platform designed to help students excel in quantitative aptitude, logical reasoning, verbal ability, and more.
+  <p style="max-width:720px; margin:8px auto 0; color:#374151">An interactive aptitude learning and test preparation platform designed to help students excel in quantitative aptitude, logical reasoning, verbal ability, and more.</p>
 
 [![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=flat-square&logo=react)](https://react.dev/)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=flat-square&logo=node.js)](https://nodejs.org/)
