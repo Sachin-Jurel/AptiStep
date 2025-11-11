@@ -1,7 +1,7 @@
 <div align="center">
-  <img src="./Frontend/src/assets/logo.png" alt="AptiStep Logo" width="120" height="120" />
+  <img src="https://raw.githubusercontent.com/Sachin-Jurel/AptiStep/main/Frontend/src/assets/logo.png" alt="AptiStep Logo" width="120" height="120" />
 
- AptiStep
+# 🎯 AptiStep
 
 **Master Aptitude with Confidence** 🚀
 
