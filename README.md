@@ -1,8 +1,7 @@
-# 🎯 AptiStep
-
 <div align="center">
+  <img src="./Frontend/src/assets/logo.png" alt="AptiStep Logo" width="120" height="120" />
 
-![AptiStep Logo](Frontend/src/assets/logo.png)
+ AptiStep
 
 **Master Aptitude with Confidence** 🚀
 
@@ -113,9 +112,16 @@ An interactive aptitude learning and test preparation platform designed to help 
    GOOGLE_GEN_AI_API_KEY=your_google_gen_ai_api_key
    ```
 
-5. **Add Logo Image**
+5. **Add Logo Image (Optional)**
    
    Add `logo.png` to `Frontend/src/assets/` directory. The logo should be a PNG image that represents the AptiStep brand.
+   
+   **To display the logo in README.md**, add this line after adding the logo file:
+   ```markdown
+   ![AptiStep Logo](Frontend/src/assets/logo.png)
+   ```
+   
+   **Note**: The logo is used in the Navbar component. The application will work without it, but a broken image icon will appear in the navbar until `logo.png` is added.
 
 6. **Run the application**
    
@@ -276,7 +282,7 @@ This project is licensed under the ISC License.
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Sachin Jurel** - *Initial work* - [GitHub](https://github.com/sachinjurel)
 
 ---
 
