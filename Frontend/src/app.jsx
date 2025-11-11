@@ -47,6 +47,7 @@ import Software from "./Pages/Computer Awareness/SoftwarePage.jsx";
 import Networking from "./Pages/Computer Awareness/NetworkingPage.jsx";
 import Programming from "./Pages/Computer Awareness/ProgrammingPage.jsx";
 import Database from "./Pages/Computer Awareness/DatabasePage.jsx";
+import LogicalTest from "./Pages/Logical/logicalTest.jsx";
 
 const App = () => {
   return (
@@ -69,9 +70,11 @@ const App = () => {
             <Route path="/test/dataInterpretation" element={<DI />} />
             <Route path="/test/GeneralKnowledge" element={<GK />} />
             <Route path="/test/computerAwareness" element={<CA />} />
-            <Route path="/test/Quantitative/:id" element={<QuantTest />} />
             <Route path="/features" element={<Features />} />
 
+
+            <Route path="/test/Quantitative/:id" element={<QuantTest />} />
+            <Route path="/test/logicalReasoning/:id" element={<LogicalTest />} />
 
             <Route path="/test/Quantitative/arithmetic" element={<Arithmetic />} />
             <Route path="/test/Quantitative/algebra" element={<Algebra />} />           

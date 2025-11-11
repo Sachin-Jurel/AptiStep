@@ -1,11 +1,14 @@
-import React from "react";
+import React, { use } from "react";
 import loginImage from "../assets/loginImage.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../context/userContext.jsx";
 
 const Login = () => {
   const navigate = useNavigate();
+  const {setUser} = useContext(UserContext);
   const [UserData, setUserData] = React.useState({
     email: "",
     password: ""
@@ -19,6 +22,7 @@ const Login = () => {
       },{
         withCredentials: true, 
       })
+      setUser(response.data.user);
       navigate("/user");
     } catch (err) {
       console.error('Error registering user:', err);

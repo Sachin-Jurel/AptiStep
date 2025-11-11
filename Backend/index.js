@@ -10,8 +10,7 @@ import cookieParser from "cookie-parser";
 import upload from "./config/multerConfig.js";
 import { GoogleGenAI } from "@google/genai";
 
-import prompt from "./Prompts/TestPrompt.js";
-import Quantprompt from "./Prompts/QuantPrompt.js";
+import prompts from "./Prompts/TestPrompt.js";
 
 app.use(
   cors({
@@ -39,15 +38,15 @@ mongoose.connect(process.env.MONGO_URL, {
 });
 
 
-const funct = async (prompt, req)=> {
+const funct = async (Prompt, req)=> {
   const token = req.cookies.token;
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const updatedUser = await userModel.findById(decoded.id).select("-password");
 
     const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
     const response = await ai.models.generateContent({
-      model: "gemini-2.5-pro",
-      contents: [{ role: "user", parts: [{ text: Quantprompt }] }],
+      model: "gemini-2.5-flash",
+      contents: [{ role: "user", parts: [{ text: Prompt }] }],
     });
 
     const text = response?.candidates?.[0]?.content?.parts?.[0]?.text || "";
@@ -210,7 +209,7 @@ app.post("/user/test",  async (req, res) => {
 
 app.post("/user/test/start", async (req, res) => {
   try {
-    let {questions, updatedUser} = await funct(prompt,req);
+    let {questions, updatedUser} = await funct(prompts.prompt,req);
     res.json({ updatedUser, questions });
   } catch (err) {
     console.error("Upload error:", err);
@@ -220,7 +219,7 @@ app.post("/user/test/start", async (req, res) => {
 
 app.post("/test/quant", async (req, res) => {
   try {
-    let {questions, updatedUser} = await funct(Quantprompt,req);
+    let {questions, updatedUser} = await funct(prompts.Quantprompt,req);
     res.json({ updatedUser, questions });
   } catch (err) {
     console.error("Upload error:", err);
@@ -228,15 +227,15 @@ app.post("/test/quant", async (req, res) => {
   }
 });
 
-// app.post("/test/logical", async (req, res) => {
-//   try {
-//     let {questions, updatedUser} = await funct(logicalprompt);
-//     res.json({ updatedUser, questions });
-//   } catch (err) {
-//     console.error("Upload error:", err);
-//     res.status(500).json({ error: err.message });
-//   }
-// });
+app.post("/test/logical", async (req, res) => {
+  try {
+    let {questions, updatedUser} = await funct(prompts.logicalprompt,req);
+    res.json({ updatedUser, questions });
+  } catch (err) {
+    console.error("Upload error:", err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 
 app.listen("8080", () => {

@@ -2,6 +2,7 @@ import React, { useState , useContext} from "react";
 import image from "../assets/image.png";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { UserContext } from "../context/userContext.jsx";
 
 
 const SignUp = () => {
@@ -10,6 +11,7 @@ const SignUp = () => {
     email: "",
     password: "",
   });
+  const {setUser} = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -23,6 +25,7 @@ const SignUp = () => {
       {
         withCredentials: true, 
       });
+      setUser(response.data.user);
       navigate("/user");
     } catch (error) {
       console.error("Error registering user:", error);
