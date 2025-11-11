@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/Sachin-Jurel/AptiStep/main/Logo.png" alt="AptiStep Logo" width="120" height="120" />
 
   <h1 style="font-size:28px; font-weight:700; margin:8px 0;">
-    🎯 <span style="color:#2563EB">Apti</span><span style="color:#10B981">Step</span>
+    <span style="color:#0D0E48">Apti</span><span style="color:#3CAA81">Step</span>
   </h1>
 
   <p style="margin:4px 0; font-weight:600">**Master Aptitude with Confidence** 🚀</p>
