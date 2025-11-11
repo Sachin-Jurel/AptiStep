@@ -1,5 +1,6 @@
 <div align="center">
   <!-- SVG title image ensures consistent colored text on GitHub -->
+  <img src="Logo.png" width="500" height="500">
   <img src="./title.svg" alt="AptiStep Title" width="420" height="92" />
 
   <p style="margin:8px 0; font-weight:600">Master Aptitude with Confidence 🚀</p>
