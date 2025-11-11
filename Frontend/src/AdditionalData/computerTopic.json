@@ -15,7 +15,18 @@
       "Power Supply Units",
       "Troubleshooting Hardware Issues"
     ],
-    "Desc": "Hardware covers the physical components of a computer system including CPU, memory, storage, and peripheral devices essential for operation."
+    "Desc": "Hardware covers the physical components of a computer system including CPU, memory, storage, and peripheral devices essential for operation.",
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/computerAwareness/hardware"
   },
   {
     "id": 2,
@@ -33,7 +44,18 @@
       "Software Installation and Updates",
       "Common Software Errors and Fixes"
     ],
-    "Desc": "Software includes system and application programs, operating systems, and tools that enable computers to perform tasks efficiently."
+    "Desc": "Software includes system and application programs, operating systems, and tools that enable computers to perform tasks efficiently.",
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/computerAwareness/software"
   },
   {
     "id": 3,
@@ -51,7 +73,18 @@
       "Cybersecurity Fundamentals",
       "Cloud and Internet Technologies"
     ],
-    "Desc": "Networking deals with communication between computers, covering network types, devices, protocols, and security concepts."
+    "Desc": "Networking deals with communication between computers, covering network types, devices, protocols, and security concepts.",
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/computerAwareness/networking"
   },
   {
     "id": 4,
@@ -69,7 +102,18 @@
       "Flowcharts and Pseudocode",
       "Recent Trends in Programming"
     ],
-    "Desc": "Programming introduces coding fundamentals, logic building, and object-oriented concepts using languages like C, Java, and Python."
+    "Desc": "Programming introduces coding fundamentals, logic building, and object-oriented concepts using languages like C, Java, and Python.",
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/computerAwareness/programming"
   },
   {
     "id": 5,
@@ -87,6 +131,17 @@
       "Backup and Recovery",
       "Popular Database Systems (MySQL, Oracle)"
     ],
-    "Desc": "Database covers DBMS concepts, SQL commands, data modeling, normalization, and database management essentials for structured data storage."
+    "Desc": "Database covers DBMS concepts, SQL commands, data modeling, normalization, and database management essentials for structured data storage.",
+    "questions": 25,
+    "duration": "35 minutes",
+    "difficulty": "Medium",
+    "instructions": [
+      "This test contains 25 questions covering various topics in quantitative aptitude.",
+      "You will have 25 minutes to complete the test.",
+      "Each question carries equal marks.", 
+      "There is no negative marking.",
+      "You can review and change your answers before submitting."
+    ],
+    "go": "/test/computerAwareness/database"
   }
 ]

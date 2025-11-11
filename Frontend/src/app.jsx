@@ -42,6 +42,11 @@ import History from "./Pages/GK/HistoryPage.jsx";
 import Geography from "./Pages/GK/GeographyPage.jsx";
 import Science from "./Pages/GK/SciencePage.jsx";
 import Sports from "./Pages/GK/SportsPage.jsx";
+import Hardware from "./Pages/Computer Awareness/HardwarePage.jsx";
+import Software from "./Pages/Computer Awareness/SoftwarePage.jsx";
+import Networking from "./Pages/Computer Awareness/NetworkingPage.jsx";
+import Programming from "./Pages/Computer Awareness/ProgrammingPage.jsx";
+import Database from "./Pages/Computer Awareness/DatabasePage.jsx";
 
 const App = () => {
   return (
@@ -97,6 +102,12 @@ const App = () => {
             <Route path="/test/GeneralKnowledge/geography" element={<Geography/>} />
             <Route path="/test/GeneralKnowledge/science" element={<Science/>} />
             <Route path="/test/GeneralKnowledge/sports" element={<Sports/>} />
+            
+            <Route path="/test/computerAwareness/hardware" element={<Hardware />} />
+            <Route path="/test/computerAwareness/software" element={<Software />} />
+            <Route path="/test/computerAwareness/networking" element={<Networking />} />
+            <Route path="/test/computerAwareness/programming" element={<Programming />} />
+            <Route path="/test/computerAwareness/database" element={<Database />} />
 
             
           </Routes>
