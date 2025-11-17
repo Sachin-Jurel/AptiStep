@@ -40,9 +40,8 @@ const Profile = () => {
         {},
         { withCredentials: true }
       );
-
+      localStorage.removeItem("user");
       setUser(null);
-      setuser();
       navigate("/");
     } catch (err) {
       navigate("/")

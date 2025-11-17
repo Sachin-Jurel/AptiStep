@@ -7,9 +7,11 @@ import ProfileImage from "../assets/default.png";
 import { UserContext } from "../context/userContext"; 
 
 const NavBar = () => {
-  const { user } = useContext(UserContext); 
-  const isLoggedIn = !!user;
+  const { user, loadingUser } = useContext(UserContext);
+
+if (loadingUser) return null; 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -21,7 +23,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full py-5 px-4 md:px-6 flex items-center justify-between h-16 text-xl font-semibold shadow-lg bg-white z-50">
+      <nav className="fixed top-0 w-full py-5 px-4 md:px-6 flex items-center justify-between h-16 text-xl font-semibold shadow-lg bg-[#FBFCFB] z-50">
         {/* Logo */}
         <Link to="/" className="flex items-center cursor-pointer px-4 md:px-10 hover:scale-105 transition-transform duration-300" onClick={closeMobileMenu}>
           <img src={logoIcon} alt="Logo" className="w-8 h-8 md:w-12 md:h-12 mx-2 md:mx-4" />
@@ -39,7 +41,7 @@ const NavBar = () => {
           </Link>
 
           {/* ✅ Conditional Rendering */}
-          {isLoggedIn ? (
+          {user ? (
             <Link to="/user" className="flex items-center gap-2 cursor-pointer">
               <img
                 src={user.profilePic || ProfileImage} 
@@ -122,7 +124,7 @@ const NavBar = () => {
           </Link>
 
           {/* Mobile Conditional Rendering */}
-          {isLoggedIn ? (
+          {user? (
             <Link
               to="/user"
               onClick={closeMobileMenu}

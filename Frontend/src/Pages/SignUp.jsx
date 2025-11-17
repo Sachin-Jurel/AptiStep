@@ -26,6 +26,7 @@ const SignUp = () => {
         withCredentials: true, 
       });
       setUser(response.data.user);
+localStorage.setItem("user", JSON.stringify(response.data.user));
       navigate("/user");
     } catch (error) {
       console.error("Error registering user:", error);

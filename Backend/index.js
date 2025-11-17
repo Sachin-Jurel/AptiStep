@@ -43,7 +43,7 @@ const funct = async (Prompt, req)=> {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const updatedUser = await userModel.findById(decoded.id).select("-password");
 
-    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_API_KEY });
+    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GEN_AI_API_KEY });
     const response = await ai.models.generateContent({
       model: "gemini-2.5-flash",
       contents: [{ role: "user", parts: [{ text: Prompt }] }],

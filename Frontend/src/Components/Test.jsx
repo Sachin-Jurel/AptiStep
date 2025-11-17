@@ -22,6 +22,9 @@ const Test = (props) => {
           navigate("/");
           return;
         }
+        if(!res.data){
+          navigate("/");
+        }
         setUser(res.data.updatedUser);
       } catch (error) {
         console.error("Error:", error);
@@ -32,11 +35,11 @@ const Test = (props) => {
     fetchTest();
   }, [setUser]);
 
-  useEffect(() => {
-    if (!user) {
-      navigate("/");
-    }
-  }, [user]);
+  // useEffect(() => {
+  //   if (!user) {
+  //     navigate("/");
+  //   }
+  // }, [user]);
 
   return (
     <div className="min-h-screen bg-gray-100 py-4 md:py-8">
