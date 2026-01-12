@@ -1,5 +1,5 @@
 import React from "react";
-import SubTest from "../../Components/subTest";
+import SubTest from "../../Components/SubTest.jsx";
 import TestTopics from "../../AdditionalData/verbalTopic.json"
 
 const Grammar = () => {
