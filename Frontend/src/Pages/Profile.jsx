@@ -14,7 +14,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:8080/user", {
+        const res = await axios.get(`${import.meta.env.VITE_Backend_url}/user`, {
           withCredentials: true,
         });
         if (!res.data) {
@@ -36,7 +36,7 @@ const Profile = () => {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:8080/logout",
+        `${process.env.Backend_url}/logout`,
         {},
         { withCredentials: true }
       );

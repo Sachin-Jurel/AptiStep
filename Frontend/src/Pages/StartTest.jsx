@@ -9,7 +9,7 @@ const TestAttempt = () => {
 
   useEffect(() => {
     const fetchTest = async () => {
-      const res = await axios.post("http://localhost:8080/user/test/start", {}, { withCredentials: true });
+      const res = await axios.post(`${import.meta.env.VITE_Backend_url}/user/test/start`, {}, { withCredentials: true });
       setUser(res.data.updatedUser);
       setQuestions(res.data.questions);
     };

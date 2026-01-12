@@ -28,7 +28,7 @@ const EditProfile = () => {
     const ensureUser = async () => {
       if (!user) {
         try {
-          const { data } = await axios.get("http://localhost:8080/user", {
+          const { data } = await axios.get(`${import.meta.env.VITE_Backend_url}/user`, {
             withCredentials: true,
           });
           setUser && setUser(data);

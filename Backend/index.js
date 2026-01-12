@@ -14,7 +14,7 @@ import prompts from "./Prompts/TestPrompt.js";
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: process.env.FRONTEND_URL,
     credentials: true,
   })
 );

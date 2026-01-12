@@ -14,7 +14,7 @@ const Test = (props) => {
     const fetchTest = async () => {
       try {
         const res = await axios.post(
-          "http://localhost:8080/user/test",
+          `${import.meta.env.VITE_Backend_url}/user/test`,
           {},
           { withCredentials: true }
         );
