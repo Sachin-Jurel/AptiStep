@@ -25,12 +25,11 @@ if (loadingUser) return null;
     <>
       <nav className="fixed top-0 w-full py-5 px-4 md:px-6 flex items-center justify-between h-16 text-xl font-semibold shadow-lg bg-[#FBFCFB] z-50">
         {/* Logo */}
-        {/* <Link to="/" className="flex items-center cursor-pointer px-4 md:px-10 hover:scale-105 transition-transform duration-300" onClick={closeMobileMenu}>
+        <Link to="/" className="flex items-center cursor-pointer px-4 md:px-10 hover:scale-105 transition-transform duration-300" onClick={closeMobileMenu}>
           <img src={logoIcon} alt="Logo" className="w-8 h-8 md:w-12 md:h-12 mx-2 md:mx-4" />
           <h2 className="text-blue-950 font-bold text-2xl md:text-3xl">Apti</h2>
           <h2 className="text-emerald-500 font-bold text-2xl md:text-3xl">Step</h2>
-        </Link> */}
-        <p className="text-2xl font-bold text-amber-800">hello</p>
+        </Link>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center text-2xl font-semibold text-blue-900 gap-10">
