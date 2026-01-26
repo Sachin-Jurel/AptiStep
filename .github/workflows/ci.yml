@@ -1,28 +1,39 @@
-name: Frontend CI
+name: Monorepo CI/CD
 
 on:
   push:
     branches: [main]
+    paths:
+      - "Frontend/**"
+      - "Backend/**"
 
 jobs:
-  build:
+  frontend:
+    name: Frontend CI
     runs-on: ubuntu-latest
-
     defaults:
       run:
-        working-directory: Frontend   # 👈 VERY IMPORTANT
+        working-directory: Frontend
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 18
+      - run: npm install
+      - run: npm run build
 
-      - name: Install dependencies
-        run: npm install
+  backend:
+    name: Backend CI
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Backend
 
-      - name: Build React app
-        run: npm run build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - run: npm install
+      - run: node index.js
